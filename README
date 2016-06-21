@@ -20,5 +20,7 @@ Tools used:
 
 Subdirectories:
 
+	benchmarks: list info on the benchmarks used, how to build
+			and run them
 	serial_port: has code for toggling serial port pins
 

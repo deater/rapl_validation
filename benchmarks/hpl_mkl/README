@@ -1,0 +1,4 @@
+This is an Intel provided binary so I probably can't include it here.
+
+We used the version from here:
+Intel linpack/compilers_and_libraries_2016.0.038/linux/mkl/benchmarks/mp_linpack/bin_intel/intel64/xhpl_intel64
