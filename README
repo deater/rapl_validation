@@ -1,0 +1,24 @@
+These are instructions for how to reproduce the results from the
+Memsys2016 paper.
+
+The experiments were done with the following equipment:
+	+ A WattsUpPro power meter (USB) hooked to a recording device
+	+ A MeasurementComputing USB 1608FS-PLUS A/D converter
+	+ Various DIMM extender boards instrumented with sense resistors
+	+ A custom ATX-P4 measurement cable connected to 
+		an ACS715 Hall effect Sensor (Pololu #1186)
+	+ An INA122 instrumentation amplifier amplified the
+		differential voltage across the DIMM sense resistor.
+	+ A serial port with a wire coming from the DTR line
+		that we hook up to the ADC for synchronization purposes
+
+Tools used:
+	Besides the ones included here, also we used the
+		wattsup and mc1608fs-plus
+	tools found at
+	https://github.com/deater/uarch-configure
+
+Subdirectories:
+
+	serial_port: has code for toggling serial port pins
+

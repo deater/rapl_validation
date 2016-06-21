@@ -1,0 +1,1 @@
+perf_4.0 stat -a -e cache-misses,cache-references,uncore_imc/data_reads/,uncore_imc/data_writes/,power/energy-cores/,power/energy-pkg/,power/energy-ram/ -I 100 -x , ./xhpl 2> perf.out

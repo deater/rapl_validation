@@ -1,0 +1,33 @@
+haswellian_initial	-- initial results
+haswellian_cohpc2015	-- results put into the (rejected) coHPC workshop paper
+haswellian_espt2015	-- results in the Extreme Scale Programming Tools
+				Workshop Presentation
+			   Also used in the MEMSYS-2016 paper
+
+Unfortunately there was a gap between gathering the results and writing
+this up, so I will describe as best I can how things were generated.
+
+For example, I will describe the hpl_mkl results
+
+	hpl_mkl.perf -- results of the "perf" command, running on the
+			instrumented system
+	hpl_mkl.stdio -- messages the benchmark printed to stdout when
+			running on the instrumented system
+	hpl_mkl.wup   -- results from the WattsUpPro power meter
+			(gathered on the measurement system)
+	hpl_mkl.daq   -- results from the MC A/D board
+			(gathered on the measurement system)
+
+For gathering results, first the wattsuppro and daq measurements
+were started.  Then on the instrumented machine the perf command
+was run.  Once it was done the wattsup/daq were manually stopped.
+
+After that the .jgr (Jgraph) file was created.  Alignment was based on the
+serial port DTR triggers.  This was manually aligned by cutting and pasting,
+although the "find_pulse" tool helped with this.
+
+The various "generate-*" C programs were used to extract the perf data.
+The various "energy-*" C programs were used to change the average power
+results into total energy results for use in the tables in the 
+paper.
+

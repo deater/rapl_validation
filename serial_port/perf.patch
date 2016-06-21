@@ -1,0 +1,108 @@
+Enables DTR toggling when perf stat starts
+Also in the CSV output gives more values past decimal point
+Also lets you use -I with smaller values, though that's not advised
+
+
+diff -ur ./temp/linux-4.1.5/tools/perf/builtin-stat.c ./linux-4.1.5/tools/perf/builtin-stat.c
+--- ./temp/linux-4.1.5/tools/perf/builtin-stat.c	2015-08-10 15:22:34.000000000 -0400
++++ ./linux-4.1.5/tools/perf/builtin-stat.c	2015-08-20 13:23:15.432260801 -0400
+@@ -691,6 +691,76 @@
+ 		return -1;
+ 	}
+ 
++/***********************/
++/* VMW DTR TOGGLE CODE */
++
++	{
++	int fd,result,sstatus;
++	char serial_name[]="/dev/ttyUSB0";
++	struct termios attr;
++	struct termios oldterminfo;
++
++	/* Open serial port */
++        fd = open(serial_name, O_RDWR);
++        if (fd<0) {
++                fprintf(stderr,"Error opening %s: %s\n",
++                        serial_name,strerror(errno));
++                return -1;
++        }
++
++        /* Save existing terminfo */
++        result = tcgetattr(fd, &oldterminfo);
++        if (result<0) {
++                fprintf(stderr,"Error tcgetattr(): %s\n",
++                        strerror(errno));
++                return -1;
++        }
++	/* Set to use hardware flow control */
++        attr = oldterminfo;
++        attr.c_cflag |= CRTSCTS | CLOCAL;
++        attr.c_oflag = 0;
++
++        /* Flush */
++        result = tcflush(fd, TCIOFLUSH);
++        if (result<0) {
++                fprintf(stderr,"ERROR tcflush() :%s\n",
++                        strerror(errno));
++                return -1;
++        }
++	/* Push out change immediately */
++        result=tcsetattr(fd, TCSANOW, &attr);
++        if (result<0) {
++                fprintf(stderr,"ERROR: tcsetattr() :%s\n",
++                        strerror(errno));
++                return -1;
++        }
++
++	result=ioctl(fd, TIOCMGET, &sstatus);
++	sstatus &= ~TIOCM_DTR;
++	result=ioctl(fd, TIOCMSET, &sstatus);
++
++
++//        set_RTS(fd, 0);
++        usleep(5000);
++//        set_RTS(fd, 1);
++
++	sstatus |= TIOCM_DTR;
++	result=ioctl(fd, TIOCMSET, &sstatus);
++
++
++        /* Restore termio settings */
++        tcsetattr(fd, TCSANOW, &oldterminfo);
++
++        /* Close the port */
++        close(fd);
++
++
++
++	}
++
++/* END VMW DTR TOGGLE CODE */
++/***************************/
++
+ 	/*
+ 	 * Enable counters and exec the command:
+ 	 */
+@@ -1062,7 +1132,7 @@
+ 	int cpu = cpu_map__id_to_cpu(id);
+ 
+ 	if (csv_output) {
+-		fmt = sc != 1.0 ?  "%.2f%s" : "%.0f%s";
++		fmt = sc != 1.0 ?  "%.6f%s" : "%.0f%s";
+ 	} else {
+ 		if (big_num)
+ 			fmt = sc != 1.0 ? "%'18.2f%s" : "%'18.0f%s";
+@@ -1887,7 +1957,7 @@
+ 		}
+ 		goto out;
+ 	}
+-	if (interval && interval < 100) {
++	if (interval && interval < 10) {
+ 		pr_err("print interval must be >= 100ms\n");
+ 		parse_options_usage(stat_usage, options, "I", 1);
+ 		goto out;
+@@ -1933,3 +2003,4 @@
+ 	perf_evlist__delete(evsel_list);
+ 	return status;
+ }
++
