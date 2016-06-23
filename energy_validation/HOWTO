@@ -1,0 +1,7 @@
+run the benchmark on instrumented machine
+
+run daq on measurement machine
+
+Generate summaries
+	../../../../tools/perf_dram_results sleep.perf > rapl_summary
+	../../../../tools/debounce_serial < sleep_1000.raw | ../../../../tools/dump_watts_multiple > daq_summary
