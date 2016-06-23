@@ -1,3 +1,7 @@
+/* Note, the pl2303 serial port seems to bounce for around 5ms */
+/* when the device is opened, so this code does some debouncing */
+/* to aid in automatically finding the starts of the traces */
+
 #include <stdio.h>
 #include <fcntl.h>
 #include <unistd.h>
@@ -19,7 +23,9 @@ int main(int argc, char **argv) {
 	int trace=0;
 	int state=STATE_NONE;
 	double trace_joules=0.0;
-	double total_joules=0;
+	int time_in_state=0;
+	int threshold=1;
+	double total_joules=0.0;
 
 	if (argc>1) {
 
@@ -45,6 +51,9 @@ int main(int argc, char **argv) {
 	read(fd,&temp_int,4);
 	rate=temp_int;
 	printf("(* Rate %d Hz *)\n",rate);
+
+	threshold=rate/500;
+	if (threshold<1) threshold=1;
 
 	read(fd,&temp_int,4);
 	channels=temp_int;
@@ -74,7 +83,11 @@ int main(int argc, char **argv) {
 
 		if (state==STATE_NONE) {
 			if (points[3]>4.0) {
-				state=STATE_DTR_START;
+				time_in_state++;
+				if (time_in_state>threshold) {
+					state=STATE_DTR_START;
+					time_in_state=0;
+				}
 			}
 		} else if (state==STATE_DTR_START) {
 
@@ -85,24 +98,30 @@ int main(int argc, char **argv) {
 					(double)ticks/(double)rate);
 				trace_ticks=0;
 				trace_joules=0.0;
+				time_in_state=0;
 			}
 		} else if (state==STATE_IN_TRACE) {
 			if (points[3]>4.0) {
-				state=STATE_DTR_STOP;
-				printf("Ending Trace %d at %lfs, %lfs Elapsed\n",
-					trace,
-					(double)ticks/(double)rate,
-					(double)trace_ticks/(double)rate);
-				printf("Total Energy: %lfJ Average Power: %lfW\n",
-					trace_joules,
-					trace_joules/((double)trace_ticks/(double)rate));
-				total_joules+=trace_joules;
-				trace++;
+				time_in_state++;
+				if (time_in_state>threshold) {
+					state=STATE_DTR_STOP;
+					printf("Ending Trace %d at %lfs, %lfs Elapsed\n",
+						trace,
+						(double)ticks/(double)rate,
+						(double)trace_ticks/(double)rate);
+					printf("Total Energy: %lfJ Average Power: %lfW\n",
+						trace_joules,
+						trace_joules/((double)trace_ticks/(double)rate));
+					total_joules+=trace_joules;
+					trace++;
+					time_in_state=0;
+				}
 			}
 		}
 		else if (state==STATE_DTR_STOP) {
 			if (points[3]<-4.0) {
 				state=STATE_NONE;
+				time_in_state=0;
 			}
 		}
 
