@@ -1,0 +1,56 @@
+[OCLToy] SmallPTGPU v1.0 (OCLToys: http://code.google.com/p/ocltoys)
+[OCLToy] OpenCL devices select method: ALL_GPUS
+[OCLToy] OpenCL Platform 0: Intel(R) Corporation
+[OCLToy] OpenCL Platform 0: OpenCL 1.2 LINUX
+[OCLToy]   OpenCL device 0: Intel(R) Core(TM) i5-4570S CPU @ 2.90GHz
+[OCLToy]     Version: OpenCL 1.2 (Build 117)
+[OCLToy]     Type: CPU
+[OCLToy]     Units: 4
+[OCLToy]     Global memory: 3867628Kbytes
+[OCLToy]     Local memory: 32Kbytes
+[OCLToy]     Local memory type: GLOBAL
+[OCLToy]     Constant memory: 128Kbytes
+[OCLToy]     NOT SELECTED
+[OCLToy] OpenCL Platform 1: Intel
+[OCLToy] OpenCL Platform 1: OpenCL 1.2 beignet 1.0.3
+[OCLToy]   OpenCL device 0: Intel(R) HD Graphics Haswell GT2 Desktop
+[OCLToy]     Version: OpenCL 1.2 beignet 1.0.3
+[OCLToy]     Type: GPU
+[OCLToy]     Units: 20
+[OCLToy]     Global memory: 2097152Kbytes
+[OCLToy]     Local memory: 64Kbytes
+[OCLToy]     Local memory type: GLOBAL
+[OCLToy]     Constant memory: 131072Kbytes
+[OCLToy]     SELECTED
+[OCLToy] Reading scene: scenes/cornell.scn
+[OCLToy]   Parsing sphere 0...
+[OCLToy]   Parsing sphere 1...
+[OCLToy]   Parsing sphere 2...
+[OCLToy]   Parsing sphere 3...
+[OCLToy]   Parsing sphere 4...
+[OCLToy]   Parsing sphere 5...
+[OCLToy]   Parsing sphere 6...
+[OCLToy]   Parsing sphere 7...
+[OCLToy]   Parsing sphere 8...
+[OCLToy] Compile OpenCL kernel: preprocessed_rendering_kernel.cl
+[OCLToy] Kernel parameters: -DPARAM_MAX_DEPTH=6 -DPARAM_DEFAULT_SIGMA_S=0.000000e+00f -DPARAM_DEFAULT_SIGMA_A=0.000000e+00f -I. -I../common
+[OCLToy] Using workgroup size  (Device 0): 512
+[OCLToy] CameraBuffer (Device 0) buffer size: 60bytes
+[OCLToy] SpheresBuffer (Device 0) buffer size: 540bytes
+[OCLToy] SamplesBuffer (Device 0) buffer size: 5625Kbytes
+[OCLToy] SeedsBuffer (Device 0) buffer size: 3750Kbytes
+[OCLToy] PixelsBuffer buffer size: 5625Kbytes
+[OCLToy] Done
+
+ Performance counter stats for 'system wide':
+
+        1480252765        cycles                                                        (100.00%)
+        1398816553        instructions              #    0.94  insns per cycle          (100.00%)
+           6957668        cache-misses              #   29.029 % of all cache refs      (100.00%)
+          23967831        cache-references                                            
+              2.89 Joules power/energy-cores/                                           (100.00%)
+            249.23 Joules power/energy-pkg/                                             (100.00%)
+             10.97 Joules power/energy-ram/                                           
+
+      13.220520720 seconds time elapsed
+
