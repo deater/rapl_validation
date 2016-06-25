@@ -1,7 +1,14 @@
 We ran Kerbal Space Program ksp-linux-1-0-4.zip
 Obviously we cannot include this here.
 
-We entered the game and launched a rocket, then recorded 30s.
-I know that's not very scientific.  Next time around we will
-provide a saved game file to make it a bit more repeatable.
+Start the game (the X86_64 version), launch a rocket.  
+In this case the stock Keral X rocket.
+Copy the provided quicksave into place.
+
+Start the "make_overhead.sh" script.  As soon as it starts,
+press and hold F9 to load the quicksave.  Then use "shift" to throttle
+up, then press "space" twice to launch.
+As soon as the overhead script increments, repeat (starting with F9).
+
+Not entirely reproducible, but seems to work well enough.
 

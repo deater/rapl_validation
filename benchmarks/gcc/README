@@ -1,0 +1,6 @@
+This was run on the papi-5.4.3 release.
+Obtain that, enter the ./src directory, run a plain "configure"
+then run the script.
+
+The gcc used was the gcc 4.9.2 that came with Debian Jessie
+

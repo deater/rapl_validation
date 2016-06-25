@@ -2,4 +2,17 @@ We ran the smallptgpu benchmark
 from ocltoys-linux64-v1.0.zip
 https://code.google.com/archive/p/ocltoys/
 
-We started graphics, then ran the benchmark.
+Booted specially patched 4.0.5 of kernel.
+Note that on this kernel the uncore memory counters crash the kernel,
+don't use them.
+
+We started X.
+echo 0 > /sys/module/i915/parameters/enable_cmd_parser
+enter smallptgpu directory
+Ran "make_overhead.sh"
+This will run the opencl raytracer.  Press "Q" when the iterations
+hit 250 (manually) and that will start the next cycle.
+
+
+TODO: much more info on how to get beinget installed.  I know
+I have it recorded somewhere.

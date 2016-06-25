@@ -1,2 +1,5 @@
 This is hpl-2.1 compiled against the libatlas that came
 with Debian Jessie.
+
+TODO: more details on compiling hpl as it's not always trivial.
+

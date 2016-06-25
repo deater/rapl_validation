@@ -1,2 +1,4 @@
 This is HPL-2.1 compiled against openblas-0.2.14 using mpich
 on a haswell system.
+
+TODO: notes on compiling hpl and openblas as this is not always trivial.
