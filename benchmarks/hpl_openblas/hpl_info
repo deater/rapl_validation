@@ -1,0 +1,105 @@
+TODO: update this and merge it with other docs I have
+
+
+To run HPL (high performance Linpack)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
++ Download from the website.
+	http://www.netlib.org/benchmark/hpl/hpl-2.1.tar.gz
++ Untar it.  The tool expects to be in the "hpl" directory from
+	your home directory to build.  
+	You can either move it there or else create a link.
++ You will need to create a Makefile.
+	There are sample ones in the setup directory.
+	Copy one to the root directory and edit it.
+	You will want to change the name, plus sort out where all the
+	libraries are.  This is a bit of a pain.
++ You will need to install various helper libraries.  On Debian
+	this involves the following
+
+	apt-get install libmpich-dev libatlas-dev libblas-dev libatlas-base-dev mipch
+
++ Run Make with the proper arch script
+	make arch=Linux
+
+Using ATLAS:
+~~~~~~~~~~~~
+
++ Atlas is the most commonly used BLAS (linear algebra library).
+	You can install it as a package, but since it has to be compatible
+	with all machines it will not be optimized for the one you
+	are running on.
+
+
+Using OpenBLAS:
+~~~~~~~~~~~~~~~
+
++ You can use openblas instead.  I ran it on a Haswell machine and
+	created an optimized Haswell BLAS.
+
+http://www.openblas.net/
+http://github.com/xianyi/OpenBLAS/archive/v0.2.14.tar.gz
+
+Running HPL:
+~~~~~~~~~~~~
+
++ Assuming you created a makefile called "Make.Linux" and compiled
+	with "make arch=Linux"
+	then if you compiled properly a directory "bin/Linux" is
+	created and an executable called "xhpl" will be there.
+
++ If you are using ATLAS on a multicore machine you will run
+	something like
+
+		mpirun -np 4 ./xhpl
+
+	to run it.  MPI will spread across in this case 4 processors.
+
++ If you are using OpenBLAS, it will automatically spread the job
+	across your processors so no need to use mpi.
+
+	./xhpl
+
++ For the measurements I am running on Haswell to generate graphs
+	I was using something more complex, like this:
+
+	 perf stat -a -e cache-misses,cache-references,uncore_imc/data_reads/,uncore_imc/data_writes/,power/energy-cores/,power/energy-pkg/,power/energy-ram/ -I 100 -x , ./xhpl 2> perf.out
+
++ By default an HPL.dat will be created for you.  It will have values
+	that give poor performance (for example on Haswell you run it
+	and you will get like 100 Megaflops performance, while in theory
+	the machine can give you 100+ Gigaflops).
+
+	To modify it, pick a value for "NB" that is the amount of memory,
+	divided by 8 (the size of 64-bit floating point in bytes)
+	then take the square root.  So for 1GB of RAM this works out
+	to be 10,000 or so.
+
+	For N you probably want a value around 128.
+	
+	If using MPI, P and Q are the grid to use.  So if you have 4
+		cores, you want P*Q to equal 4, so 4 and 1 or 2 and 2.
+
+	You can play with the numbers until you get the highest gigaflop
+	value.
+
+	Note that by default the HPL.dat file specifies a large series
+	of runs, trying lots of different sizes.  You can modify the
+	HPL.dat file to only do one run by setting various parameters.
+
+
+Estimated Theoretical Performance
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	What is a believable max limit for Gigaflops?
+
+	You can roughly estimate based on CPU paramaters.
+
+	For example on Haswell, using AVX2, it can do
+	16 dual-precision floating point ops per second.
+
+	On a machine with 4 cores that run at 3.4GHz this would
+	give a theoretical peak of 217Gflops.  In real life
+	you never get the theoretical peak.
+
+	With openblas and HPL I managed to get 120Gflops.
