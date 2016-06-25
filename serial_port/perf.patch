@@ -1,19 +1,17 @@
-Enables DTR toggling when perf stat starts
-Also in the CSV output gives more values past decimal point
-Also lets you use -I with smaller values, though that's not advised
-
-
-diff -ur ./temp/linux-4.1.5/tools/perf/builtin-stat.c ./linux-4.1.5/tools/perf/builtin-stat.c
---- ./temp/linux-4.1.5/tools/perf/builtin-stat.c	2015-08-10 15:22:34.000000000 -0400
-+++ ./linux-4.1.5/tools/perf/builtin-stat.c	2015-08-20 13:23:15.432260801 -0400
-@@ -691,6 +691,76 @@
- 		return -1;
- 	}
+diff -ur blah/linux-4.1.5/tools/perf/builtin-stat.c linux-4.1.5/tools/perf/builtin-stat.c
+--- blah/linux-4.1.5/tools/perf/builtin-stat.c	2015-08-10 15:22:34.000000000 -0400
++++ linux-4.1.5/tools/perf/builtin-stat.c	2016-06-21 17:12:49.900261237 -0400
+@@ -622,6 +622,81 @@
+ 	workload_exec_errno = info->si_value.sival_int;
+ }
  
++
 +/***********************/
 +/* VMW DTR TOGGLE CODE */
++/***********************/
++static int vmw_dtr_toggle(int length) {
 +
-+	{
++
 +	int fd,result,sstatus;
 +	char serial_name[]="/dev/ttyUSB0";
 +	struct termios attr;
@@ -60,7 +58,7 @@ diff -ur ./temp/linux-4.1.5/tools/perf/builtin-stat.c ./linux-4.1.5/tools/perf/b
 +
 +
 +//        set_RTS(fd, 0);
-+        usleep(5000);
++        usleep(length);
 +//        set_RTS(fd, 1);
 +
 +	sstatus |= TIOCM_DTR;
@@ -73,17 +71,34 @@ diff -ur ./temp/linux-4.1.5/tools/perf/builtin-stat.c ./linux-4.1.5/tools/perf/b
 +        /* Close the port */
 +        close(fd);
 +
++	return 0;
++}
 +
-+
-+	}
-+
++/***************************/
 +/* END VMW DTR TOGGLE CODE */
 +/***************************/
 +
- 	/*
- 	 * Enable counters and exec the command:
- 	 */
-@@ -1062,7 +1132,7 @@
++
++
+ static int __run_perf_stat(int argc, const char **argv)
+ {
+ 	char msg[512];
+@@ -759,10 +834,14 @@
+ 	if (sync_run)
+ 		sync();
+ 
++	vmw_dtr_toggle(5000);
++
+ 	ret = __run_perf_stat(argc, argv);
+ 	if (ret)
+ 		return ret;
+ 
++	vmw_dtr_toggle(5000);
++
+ 	if (post_cmd) {
+ 		ret = system(post_cmd);
+ 		if (ret)
+@@ -1062,7 +1141,7 @@
  	int cpu = cpu_map__id_to_cpu(id);
  
  	if (csv_output) {
@@ -92,7 +107,7 @@ diff -ur ./temp/linux-4.1.5/tools/perf/builtin-stat.c ./linux-4.1.5/tools/perf/b
  	} else {
  		if (big_num)
  			fmt = sc != 1.0 ? "%'18.2f%s" : "%'18.0f%s";
-@@ -1887,7 +1957,7 @@
+@@ -1887,7 +1966,7 @@
  		}
  		goto out;
  	}
@@ -101,7 +116,7 @@ diff -ur ./temp/linux-4.1.5/tools/perf/builtin-stat.c ./linux-4.1.5/tools/perf/b
  		pr_err("print interval must be >= 100ms\n");
  		parse_options_usage(stat_usage, options, "I", 1);
  		goto out;
-@@ -1933,3 +2003,4 @@
+@@ -1933,3 +2012,4 @@
  	perf_evlist__delete(evsel_list);
  	return status;
  }
