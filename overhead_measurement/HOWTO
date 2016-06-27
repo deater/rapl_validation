@@ -1,5 +1,0 @@
-sleep:
-for i in `seq 1 64`; do perf_4.0 stat -a -e power/energy-cores/,power/energy-pkg/,power/energy-ram/ sleep 10 &> results.$i ; done
-
-stream:
-for i in `seq 1 64`; do perf_4.0 stat -a -e power/energy-cores/,power/energy-pkg/,power/energy-ram/ /home/vince/research/power-measurement/power_benchmarks/stream-5.10/stream_omp &> results.$i ; done
