@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-double get_joules(char *base, int which) {
+double get_joules(char *base, int which, double *get_seconds) {
 
 	FILE *fff;
 	char filename[BUFSIZ];
@@ -32,6 +32,7 @@ double get_joules(char *base, int which) {
 
 	}
 	fclose(fff);
+	*get_seconds=seconds;
 	return joules;
 }
 
@@ -39,18 +40,19 @@ int main(int argc, char **argv) {
 
 	int i;
 	int count=10;
-	double joules,total_joules=0.0;
+	double joules,total_joules=0.0,total_seconds=0.0,seconds;
 
 	if (argc<2) {
 		printf("Usage: %s base count\n",argv[0]);
 	}
 
 	for(i=1;i<=10;i++) {
-		joules=get_joules(argv[1],i);
+		joules=get_joules(argv[1],i,&seconds);
 		total_joules+=joules;
+		total_seconds+=seconds;
 	}
 
-	printf("RAPL average Joules=%lf\n",total_joules/(double)count);
+	printf("RAPL average Joules=%lf\tRAPL average Watts=%lf\n",total_joules/(double)count,total_joules/total_seconds);
 
 	return 0;
 }
