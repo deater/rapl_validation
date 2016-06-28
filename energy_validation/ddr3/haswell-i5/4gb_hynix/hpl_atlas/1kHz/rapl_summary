@@ -8,4 +8,4 @@ Trace 7 95.400000J, 59.257610 seconds, 1.609920W
 Trace 8 95.280000J, 59.217508 seconds, 1.608984W
 Trace 9 95.290000J, 59.232457 seconds, 1.608746W
 Trace 10 95.270000J, 59.231869 seconds, 1.608425W
-RAPL average Joules=95.381000
+RAPL average Joules=95.381000	RAPL average Watts=1.608953

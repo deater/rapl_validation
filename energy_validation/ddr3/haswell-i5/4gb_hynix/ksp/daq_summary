@@ -33,4 +33,4 @@ Starting Trace 9 at 202.666000
 Ending Trace 9 at 222.681000s, 20.015000s Elapsed
 Total Energy: 29.511597J Average Power: 1.474474W
 (* Stop Time 1466788453.797169)
-Average Joules=29.490235
+Average Joules=29.490235	Average Watts=1.473436
