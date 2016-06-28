@@ -1,0 +1,17 @@
+Error opening /dev/ttyUSB0: Permission denied
+Error opening /dev/ttyUSB0: Permission denied
+
+ Performance counter stats for 'system wide':
+
+          48566258        cycles                                                        (100.00%)
+          10282590        instructions              #    0.21  insns per cycle          (100.00%)
+            761839        cache-misses              #   78.236 % of all cache refs      (100.00%)
+            973771        cache-references                                            
+           3054.92 MiB    uncore_imc/data_reads/                                        (100.00%)
+              6.04 MiB    uncore_imc/data_writes/                                     
+              0.13 Joules power/energy-cores/                                           (100.00%)
+             26.83 Joules power/energy-pkg/                                             (100.00%)
+              4.76 Joules power/energy-ram/                                           
+
+      10.004233819 seconds time elapsed
+
