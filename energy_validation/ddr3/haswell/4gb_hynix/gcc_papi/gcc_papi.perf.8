@@ -1,0 +1,39 @@
+/bin/sh: 1: [: perf_event: unexpected operator
+/bin/sh: 1: [: perf_event_uncore: unexpected operator
+ar: creating libtestlib.a
+threads.c: In function ‘_papi_hwi_shutdown_global_threads’:
+threads.c:461:16: warning: variable ‘our_tid’ set but not used [-Wunused-but-set-variable]
+  unsigned long our_tid;
+                ^
+papi_preset.c: In function ‘papi_load_derived_events’:
+papi_preset.c:965:6: warning: variable ‘preset’ set but not used [-Wunused-but-set-variable]
+  int preset = 0;
+      ^
+ar: creating libpapi.a
+threads.c: In function ‘_papi_hwi_shutdown_global_threads’:
+threads.c:461:16: warning: variable ‘our_tid’ set but not used [-Wunused-but-set-variable]
+  unsigned long our_tid;
+                ^
+papi_preset.c: In function ‘papi_load_derived_events’:
+papi_preset.c:965:6: warning: variable ‘preset’ set but not used [-Wunused-but-set-variable]
+  int preset = 0;
+      ^
+zero_omp.c: In function ‘main’:
+zero_omp.c:118:6: warning: variable ‘maxthr’ set but not used [-Wunused-but-set-variable]
+  int maxthr, retval;
+      ^
+
+ Performance counter stats for 'system wide':
+
+       92041047278        cycles                                                        (100.00%)
+      115059542626        instructions              #    1.25  insns per cycle          (100.00%)
+         146375894        cache-misses              #   15.982 % of all cache refs      (100.00%)
+         915903219        cache-references                                            
+          13094.30 MiB    uncore_imc/data_reads/                                        (100.00%)
+           9598.87 MiB    uncore_imc/data_writes/                                     
+            273.68 Joules power/energy-cores/                                           (100.00%)
+            340.66 Joules power/energy-pkg/                                             (100.00%)
+             10.03 Joules power/energy-ram/                                           
+
+       9.033474194 seconds time elapsed
+

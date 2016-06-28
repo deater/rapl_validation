@@ -1,0 +1,36 @@
+(* Version 0 *)
+(* Start Time 1467130983.241533)
+(* Rate 1000 Hz *)
+(* Channels 4 *)
+Starting Trace 0 at 2.959000
+Ending Trace 0 at 11.877000s, 8.918000s Elapsed
+Total Energy: 7.349602J Average Power: 0.824131W
+Starting Trace 1 at 12.514000
+Ending Trace 1 at 21.540000s, 9.026000s Elapsed
+Total Energy: 7.176495J Average Power: 0.795091W
+Starting Trace 2 at 22.180000
+Ending Trace 2 at 31.180000s, 9.000000s Elapsed
+Total Energy: 7.220979J Average Power: 0.802331W
+Starting Trace 3 at 31.815000
+Ending Trace 3 at 40.891000s, 9.076000s Elapsed
+Total Energy: 7.387866J Average Power: 0.814000W
+Starting Trace 4 at 41.526000
+Ending Trace 4 at 50.648000s, 9.122000s Elapsed
+Total Energy: 7.450292J Average Power: 0.816739W
+Starting Trace 5 at 51.285000
+Ending Trace 5 at 60.379000s, 9.094000s Elapsed
+Total Energy: 7.351078J Average Power: 0.808344W
+Starting Trace 6 at 61.016000
+Ending Trace 6 at 69.963000s, 8.947000s Elapsed
+Total Energy: 7.104752J Average Power: 0.794093W
+Starting Trace 7 at 70.602000
+Ending Trace 7 at 79.647000s, 9.045000s Elapsed
+Total Energy: 7.160042J Average Power: 0.791602W
+Starting Trace 8 at 80.285000
+Ending Trace 8 at 89.350000s, 9.065000s Elapsed
+Total Energy: 7.296226J Average Power: 0.804879W
+Starting Trace 9 at 89.992000
+Ending Trace 9 at 98.912000s, 8.920000s Elapsed
+Total Energy: 7.232572J Average Power: 0.810827W
+(* Stop Time 1467131086.897232)
+Average Joules=7.272990	Average Watts=0.806202
