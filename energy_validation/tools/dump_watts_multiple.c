@@ -26,6 +26,7 @@ int main(int argc, char **argv) {
 	int time_in_state=0;
 	int threshold=1;
 	double total_joules=0.0;
+	double total_time=0.0;
 
 	if (argc>1) {
 
@@ -113,6 +114,7 @@ int main(int argc, char **argv) {
 						trace_joules,
 						trace_joules/((double)trace_ticks/(double)rate));
 					total_joules+=trace_joules;
+					total_time+=(double)trace_ticks/(double)rate;
 					trace++;
 					time_in_state=0;
 				}
@@ -153,7 +155,7 @@ int main(int argc, char **argv) {
 	read(fd,&temp64,8);
 	printf("%06lld)\n",temp64);
 
-	printf("Average Joules=%lf\n",total_joules/(double)trace);
+	printf("Average Joules=%lf\tAverage Watts=%lf\n",total_joules/(double)trace,total_joules/total_time);
 
 	return 0;
 }
