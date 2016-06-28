@@ -1,0 +1,15 @@
+
+ Performance counter stats for 'system wide':
+
+      270170440498        cycles                                                        (100.00%)
+       24978283013        instructions              #    0.09  insns per cycle          (100.00%)
+         617508845        cache-misses              #   65.257 % of all cache refs      (100.00%)
+         946276736        cache-references                                            
+          78988.87 MiB    uncore_imc/data_reads/                                        (100.00%)
+          30893.72 MiB    uncore_imc/data_writes/                                     
+            246.76 Joules power/energy-cores/                                           (100.00%)
+            321.49 Joules power/energy-pkg/                                             (100.00%)
+             32.30 Joules power/energy-ram/                                           
+
+       9.986048213 seconds time elapsed
+
