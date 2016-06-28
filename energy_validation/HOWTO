@@ -1,6 +1,24 @@
-run the benchmark on instrumented machine
+install the 4.1.5 kernel on the machine (no changes in kernel, just
+for consistency).
+
+Have the perf-4.1.5 patched to toggle the serial port in the right place.
+
+Make sure we have system wide access to perf events
+	echo "0" > /proc/sys/kernel/perf_event_paranoid
+
+Make sure our user has access to /dev/ttyUSB0 (usually involves adding
+our user to the "dialout" group.
+
 
 run daq on measurement machine
+
+quickly
+
+run the benchmark on instrumented machine
+
+stop the daq when benchmark complete
+
+copy results to central location
 
 Generate summaries
 	../../../../../tools/perf_dram_results sleep.perf > rapl_summary
