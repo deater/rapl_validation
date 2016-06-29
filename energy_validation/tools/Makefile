@@ -2,13 +2,21 @@ CC = gcc
 CFLAGS = -Wall -O2
 LFLAGS =
 
-all:	perf_dram_results dump_watts_multiple debounce_serial
+all:	perf_dram_results dump_watts_multiple debounce_serial perf_dram_results_new
 
 perf_dram_results:	perf_dram_results.o
 	$(CC) $(LFLAGS) -o perf_dram_results perf_dram_results.o
 
 perf_dram_results.o:	perf_dram_results.c
 	$(CC) $(CFLAGS) -c perf_dram_results.c
+
+perf_dram_results_new:	perf_dram_results_new.o
+	$(CC) $(LFLAGS) -o perf_dram_results_new perf_dram_results_new.o
+
+perf_dram_results_new.o:	perf_dram_results_new.c
+	$(CC) $(CFLAGS) -c perf_dram_results_new.c
+
+
 
 dump_watts_multiple:	dump_watts_multiple.o
 	$(CC) $(LFLAGS) -o dump_watts_multiple dump_watts_multiple.o
@@ -23,4 +31,4 @@ debounce_serial.o:	debounce_serial.c
 	$(CC) $(CFLAGS) -c debounce_serial.c
 
 clean:
-	rm -f perf_dram_results dump_watts_multiple debounce_serial *.o *~
+	rm -f perf_dram_results_new perf_dram_results dump_watts_multiple debounce_serial *.o *~
