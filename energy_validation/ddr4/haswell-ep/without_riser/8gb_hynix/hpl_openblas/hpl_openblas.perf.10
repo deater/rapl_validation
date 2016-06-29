@@ -1,0 +1,20 @@
+Error opening /dev/ttyUSB0: No such file or directory
+Error opening /dev/ttyUSB0: No such file or directory
+
+ Performance counter stats for 'system wide':
+
+      372687458629         cycles                                                      
+      803844869922         instructions              #    2.16  insns per cycle        
+         314647457         cache-misses              #    7.286 % of all cache refs    
+        4318531817         cache-references                                            
+          81087.56 MiB     uncore_imc_0/cas_count_read/                                   
+          47134.60 MiB     uncore_imc_0/cas_count_write/                                   
+              0.00 Joules
+ power/energy-cores/                                         
+           2583.07 Joules
+ power/energy-pkg/                                           
+             62.97 Joules
+ power/energy-ram/                                           
+
+      27.630374435 seconds time elapsed
+

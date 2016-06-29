@@ -1,0 +1,44 @@
+Error opening /dev/ttyUSB0: No such file or directory
+threads.c: In function ‘_papi_hwi_shutdown_global_threads’:
+threads.c:461:16: warning: variable ‘our_tid’ set but not used [-Wunused-but-set-variable]
+  unsigned long our_tid;
+                ^
+papi_preset.c: In function ‘papi_load_derived_events’:
+papi_preset.c:965:6: warning: variable ‘preset’ set but not used [-Wunused-but-set-variable]
+  int preset = 0;
+      ^
+/bin/sh: 1: [: perf_event: unexpected operator
+/bin/sh: 1: [: perf_event_uncore: unexpected operator
+ar: creating libtestlib.a
+ar: creating libpapi.a
+threads.c: In function ‘_papi_hwi_shutdown_global_threads’:
+threads.c:461:16: warning: variable ‘our_tid’ set but not used [-Wunused-but-set-variable]
+  unsigned long our_tid;
+                ^
+papi_preset.c: In function ‘papi_load_derived_events’:
+papi_preset.c:965:6: warning: variable ‘preset’ set but not used [-Wunused-but-set-variable]
+  int preset = 0;
+      ^
+zero_omp.c: In function ‘main’:
+zero_omp.c:118:6: warning: variable ‘maxthr’ set but not used [-Wunused-but-set-variable]
+  int maxthr, retval;
+      ^
+Error opening /dev/ttyUSB0: No such file or directory
+
+ Performance counter stats for 'system wide':
+
+       88964806216         cycles                                                      
+      127580345723         instructions              #    1.43  insns per cycle        
+          52889363         cache-misses              #    6.004 % of all cache refs    
+         880864803         cache-references                                            
+           4925.90 MiB     uncore_imc_0/cas_count_read/                                   
+           5912.71 MiB     uncore_imc_0/cas_count_write/                                   
+              0.00 Joules
+ power/energy-cores/                                         
+            683.49 Joules
+ power/energy-pkg/                                           
+             16.13 Joules
+ power/energy-ram/                                           
+
+       9.515790854 seconds time elapsed
+
