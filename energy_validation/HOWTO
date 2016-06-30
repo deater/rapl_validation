@@ -11,6 +11,11 @@ our user to the "dialout" group.
 
 
 run daq on measurement machine
+	On DDR3/haswell:
+		sudo ./daqflex -b -c4 -d -r 1000 -o out.raw
+
+	On DDr4/haswell-ep:
+		sudo ./daqflex -b -c8 -s -r 1000 -o out.raw
 
 quickly
 
@@ -20,6 +25,13 @@ stop the daq when benchmark complete
 
 copy results to central location
 
+
 Generate summaries
+	On Haswell:
 	../../../../../tools/perf_dram_results sleep.perf > rapl_summary
-	zcat sleep_1000.raw.gz | ../../../../../tools/dump_watts_multiple > daq_summary
+	zcat sleep_1000.raw.gz | ../../../../../tools/dump_watts_ddr3 > daq_summary
+
+
+	On Haswell-ep:
+	../../../../../tools/perf_dram_results_new sleep.perf > rapl_summary
+	zcat sleep_1000.raw.gz | ../../../../../tools/dump_watts_ddr4 > daq_summary
