@@ -28,6 +28,8 @@ int main(int argc, char **argv) {
 	double total_joules_vdd=0.0;
 	double total_joules_vpp=0.0;
 	double total_time=0.0;
+	double gain=100.0;
+	double resistor=0.005;
 
 	if (argc>1) {
 
@@ -53,6 +55,10 @@ int main(int argc, char **argv) {
 	read(fd,&temp_int,4);
 	rate=temp_int;
 	printf("(* Rate %d Hz *)\n",rate);
+
+	printf("(* Gain %lf *)\n",gain);
+	printf("(* Resistor %lf *)\n",resistor);
+
 
 	threshold=rate/500;
 	if (threshold<1) threshold=1;
@@ -144,8 +150,8 @@ int main(int argc, char **argv) {
 			/* V=points[1] */
 			/* I=V/R = (V/AMP)/R = V/100/.005 */
 
-			watts_vdd=((points[0]/100.0)/0.005)*points[1];
-			watts_vpp=((points[2]/100.0)/0.005)*points[3];
+			watts_vdd=((points[0]/gain)/resistor)*points[1];
+			watts_vpp=((points[2]/gain)/resistor)*points[3];
 
 #if 0
 			printf("%lf\t%lf\t%lf (* %lf %lf %lf %lf)\n",
