@@ -1,0 +1,121 @@
+================================================================================
+HPLinpack 2.1  --  High-Performance Linpack benchmark  --   October 26, 2012
+Written by A. Petitet and R. Clint Whaley,  Innovative Computing Laboratory, UTK
+Modified by Piotr Luszczek, Innovative Computing Laboratory, UTK
+Modified by Julien Langou, University of Colorado Denver
+================================================================================
+
+An explanation of the input/output parameters follows:
+T/V    : Wall time / encoded variant.
+N      : The order of the coefficient matrix A.
+NB     : The partitioning blocking factor.
+P      : The number of process rows.
+Q      : The number of process columns.
+Time   : Time in seconds to solve the linear system.
+Gflops : Rate of execution for solving the linear system.
+
+The following parameter values will be used:
+
+N        :   15000 
+NB       :     256 
+PMAP     : Row-major process mapping
+P        :       2 
+Q        :       2 
+PFACT    :    Left 
+NBMIN    :       2 
+NDIV     :       2 
+RFACT    :   Right 
+BCAST    :   2ring 
+DEPTH    :       0 
+SWAP     : Mix (threshold = 64)
+L1       : transposed form
+U        : transposed form
+EQUIL    : yes
+ALIGN    :    8 double precision words
+
+--------------------------------------------------------------------------------
+
+- The matrix A is randomly generated for each test.
+- The following scaled residual check will be computed:
+      ||Ax-b||_oo / ( eps * ( || x ||_oo * || A ||_oo + || b ||_oo ) * N )
+- The relative machine precision (eps) is taken to be               1.110223e-16
+- Computational tests pass if scaled residuals are less than                16.0
+
+Column=000256 Fraction=0.005 Mflops=141861.47
+Column=000512 Fraction=0.010 Mflops=139598.54
+Column=000768 Fraction=0.015 Mflops=140367.81
+Column=001024 Fraction=0.020 Mflops=139431.80
+Column=001280 Fraction=0.025 Mflops=139726.10
+Column=001536 Fraction=0.030 Mflops=139239.29
+Column=001792 Fraction=0.035 Mflops=138715.86
+Column=002048 Fraction=0.040 Mflops=138437.18
+Column=002304 Fraction=0.045 Mflops=138459.34
+Column=002560 Fraction=0.050 Mflops=137917.13
+Column=002816 Fraction=0.055 Mflops=137889.18
+Column=003072 Fraction=0.060 Mflops=137316.59
+Column=003328 Fraction=0.065 Mflops=137229.41
+Column=003584 Fraction=0.070 Mflops=136758.48
+Column=003840 Fraction=0.075 Mflops=136669.40
+Column=004096 Fraction=0.080 Mflops=136319.00
+Column=004352 Fraction=0.085 Mflops=136186.99
+Column=004608 Fraction=0.090 Mflops=135883.55
+Column=004864 Fraction=0.095 Mflops=135717.34
+Column=005120 Fraction=0.100 Mflops=135396.21
+Column=005376 Fraction=0.105 Mflops=135280.10
+Column=005632 Fraction=0.110 Mflops=134983.92
+Column=005888 Fraction=0.115 Mflops=134822.14
+Column=006144 Fraction=0.120 Mflops=134530.93
+Column=006400 Fraction=0.125 Mflops=134349.33
+Column=006656 Fraction=0.130 Mflops=134073.80
+Column=006912 Fraction=0.135 Mflops=133906.52
+Column=007168 Fraction=0.140 Mflops=133547.29
+Column=007424 Fraction=0.145 Mflops=133348.63
+Column=007680 Fraction=0.150 Mflops=133051.04
+Column=007936 Fraction=0.155 Mflops=132816.68
+Column=008192 Fraction=0.160 Mflops=132531.87
+Column=008448 Fraction=0.165 Mflops=132336.97
+Column=008704 Fraction=0.170 Mflops=132059.19
+Column=008960 Fraction=0.175 Mflops=131857.34
+Column=009216 Fraction=0.180 Mflops=131582.49
+Column=009472 Fraction=0.185 Mflops=131397.14
+Column=009728 Fraction=0.190 Mflops=131130.47
+Column=009984 Fraction=0.195 Mflops=130952.92
+Column=010240 Fraction=0.200 Mflops=130693.26
+Column=010496 Fraction=0.205 Mflops=130519.48
+Column=010752 Fraction=0.210 Mflops=130289.11
+Column=011008 Fraction=0.215 Mflops=130116.02
+Column=011264 Fraction=0.220 Mflops=129895.45
+Column=011520 Fraction=0.225 Mflops=129742.14
+Column=011776 Fraction=0.230 Mflops=129534.83
+Column=012032 Fraction=0.235 Mflops=129400.03
+Column=012288 Fraction=0.240 Mflops=129230.38
+Column=012544 Fraction=0.245 Mflops=129115.50
+Column=012800 Fraction=0.250 Mflops=128977.86
+Column=013056 Fraction=0.255 Mflops=128891.31
+Column=013312 Fraction=0.260 Mflops=128776.56
+Column=013568 Fraction=0.265 Mflops=128711.36
+Column=013824 Fraction=0.270 Mflops=128624.51
+Column=014080 Fraction=0.275 Mflops=128579.01
+Column=014336 Fraction=0.280 Mflops=128523.43
+Column=014592 Fraction=0.285 Mflops=128502.55
+Column=014848 Fraction=0.290 Mflops=128472.80
+================================================================================
+T/V                N    NB     P     Q               Time                 Gflops
+--------------------------------------------------------------------------------
+WR02R2L2       15000   256     2     2              18.26            1.23257e+02
+HPL_pdgesv() start time Wed Jun 29 15:03:40 2016
+
+HPL_pdgesv() end time   Wed Jun 29 15:03:58 2016
+
+--------------------------------------------------------------------------------
+||Ax-b||_oo/(eps*(||A||_oo*||x||_oo+||b||_oo)*N)=        0.0034103 ...... PASSED
+================================================================================
+
+Finished      1 tests with the following results:
+              1 tests completed and passed residual checks,
+              0 tests completed and failed residual checks,
+              0 tests skipped because of illegal input values.
+--------------------------------------------------------------------------------
+
+End of Tests.
+================================================================================
