@@ -31,7 +31,7 @@ int main(int argc, char **argv) {
 	double gain_vdd=100.0;
 	double gain_vpp=300.0;
 	double resistor_vdd=0.005;
-	double resistor_vpp=0.010;
+	double resistor_vpp=0.005;
 
 	if (argc>1) {
 

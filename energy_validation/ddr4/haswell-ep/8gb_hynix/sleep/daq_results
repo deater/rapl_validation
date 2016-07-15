@@ -4,49 +4,49 @@
 (* Gain Vdd 100.000000 *)
 (* Gain Vpp 300.000000 *)
 (* Resistor Vdd 0.005000 *)
-(* Resistor Vpp 0.010000 *)
+(* Resistor Vpp 0.005000 *)
 (* Channels 4 *)
 Starting Trace 0 at 2.344000
 Ending Trace 0 at 12.386000s, 10.042000s Elapsed
 Total VDD Energy: 3.193897J Average VDD Power: 0.318054W
-Total VPP Energy: 0.054444J Average VPP Power: 0.005422W
+Total VPP Energy: 0.108889J Average VPP Power: 0.010843W
 Starting Trace 1 at 12.938000
 Ending Trace 1 at 22.964000s, 10.026000s Elapsed
 Total VDD Energy: 3.205026J Average VDD Power: 0.319671W
-Total VPP Energy: 0.054176J Average VPP Power: 0.005404W
+Total VPP Energy: 0.108352J Average VPP Power: 0.010807W
 Starting Trace 2 at 23.496000
 Ending Trace 2 at 33.521000s, 10.025000s Elapsed
 Total VDD Energy: 3.396976J Average VDD Power: 0.338850W
-Total VPP Energy: 0.054034J Average VPP Power: 0.005390W
+Total VPP Energy: 0.108069J Average VPP Power: 0.010780W
 Starting Trace 3 at 34.054000
 Ending Trace 3 at 44.080000s, 10.026000s Elapsed
 Total VDD Energy: 3.211645J Average VDD Power: 0.320332W
-Total VPP Energy: 0.053811J Average VPP Power: 0.005367W
+Total VPP Energy: 0.107621J Average VPP Power: 0.010734W
 Starting Trace 4 at 44.612000
 Ending Trace 4 at 54.633000s, 10.021000s Elapsed
 Total VDD Energy: 3.233707J Average VDD Power: 0.322693W
-Total VPP Energy: 0.053712J Average VPP Power: 0.005360W
+Total VPP Energy: 0.107424J Average VPP Power: 0.010720W
 Starting Trace 5 at 55.167000
 Ending Trace 5 at 65.192000s, 10.025000s Elapsed
 Total VDD Energy: 3.287181J Average VDD Power: 0.327898W
-Total VPP Energy: 0.053963J Average VPP Power: 0.005383W
+Total VPP Energy: 0.107927J Average VPP Power: 0.010766W
 Starting Trace 6 at 65.725000
 Ending Trace 6 at 75.751000s, 10.026000s Elapsed
 Total VDD Energy: 3.434680J Average VDD Power: 0.342577W
-Total VPP Energy: 0.054971J Average VPP Power: 0.005483W
+Total VPP Energy: 0.109943J Average VPP Power: 0.010966W
 Starting Trace 7 at 76.283000
 Ending Trace 7 at 86.309000s, 10.026000s Elapsed
 Total VDD Energy: 3.415430J Average VDD Power: 0.340657W
-Total VPP Energy: 0.055318J Average VPP Power: 0.005517W
+Total VPP Energy: 0.110636J Average VPP Power: 0.011035W
 Starting Trace 8 at 86.841000
 Ending Trace 8 at 96.867000s, 10.026000s Elapsed
 Total VDD Energy: 3.392716J Average VDD Power: 0.338392W
-Total VPP Energy: 0.055527J Average VPP Power: 0.005538W
+Total VPP Energy: 0.111053J Average VPP Power: 0.011077W
 Starting Trace 9 at 97.400000
 Ending Trace 9 at 107.425000s, 10.025000s Elapsed
 Total VDD Energy: 3.445691J Average VDD Power: 0.343710W
-Total VPP Energy: 0.055166J Average VPP Power: 0.005503W
+Total VPP Energy: 0.110331J Average VPP Power: 0.011006W
 (* Stop Time 1468590074.764374)
 Average Vdd Joules=3.321695	Average Vdd Watts=0.331282
-Average Vpp Joules=0.054512	Average Vpp Watts=0.005437
-Average Total Joules=3.376207	Average Total Watts=0.336718
+Average Vpp Joules=0.109024	Average Vpp Watts=0.010873
+Average Total Joules=3.430720	Average Total Watts=0.342155
