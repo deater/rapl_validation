@@ -1,0 +1,8 @@
+These results were measured with the daq in 8-channel single-ended mode.
+The results were much worse than the ones measured in 4-channel differential.
+
+It is possible the difference was because the ground from the server
+was not properly connected to the ground on the DAQ (the ddr4 extender
+doesn't have a ground-connector).  We use the ground from the USB-serial
+for the differential runs, this was not connected directly to common
+ground on the single-ended.
