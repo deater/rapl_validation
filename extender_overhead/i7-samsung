@@ -1,0 +1,11 @@
+benchmark	with	without		% diff
+~~~~~~~~~	~~~~	~~~~~~~		~~~~
+
+sleep		4.202	4.760		13.3%
+stream		27.587	28.238		2.4%
+gcc_papi	11.123	10.591		-4.8%
+hpl_atlas	90.524	91.938		1.6%
+hpl_mkl		51.670	52.696		2.0%
+hpl_openblas	68.054	70.446		3.5%
+opencl		--	--		--
+ksp		25.660	25.492		-0.7%
