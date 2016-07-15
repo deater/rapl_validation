@@ -102,6 +102,10 @@ int main(int argc, char **argv) {
 		} else if (state==STATE_DTR_START) {
 
 			if (points[3]<-4.0) {
+
+//				time_in_state++;
+//				if (time_in_state>threshold) {
+
 				state=STATE_IN_TRACE;
 				printf("Starting Trace %d at %lf\n",
 					trace,
@@ -110,6 +114,7 @@ int main(int argc, char **argv) {
 				sub_ticks=0;
 				trace_joules=0.0;
 				time_in_state=0;
+//				}
 			}
 		} else if (state==STATE_IN_TRACE) {
 			if (points[3]>4.0) {
@@ -133,8 +138,12 @@ int main(int argc, char **argv) {
 		}
 		else if (state==STATE_DTR_STOP) {
 			if (points[3]<-4.0) {
-				state=STATE_NONE;
-				time_in_state=0;
+//				time_in_state++;
+//				if (time_in_state>threshold) {
+					state=STATE_NONE;
+					time_in_state=0;
+//				}
+
 			}
 		}
 

@@ -1,0 +1,7 @@
+Made these using 
+zcat stream_10000.raw.gz | ../../../../../tools/sampling_accuracy 1
+zcat stream_10000.raw.gz | ../../../../../tools/sampling_accuracy 2
+zcat stream_10000.raw.gz | ../../../../../tools/sampling_accuracy 10
+...
+zcat stream_10000.raw.gz | ../../../../../tools/sampling_accuracy 10000
+
