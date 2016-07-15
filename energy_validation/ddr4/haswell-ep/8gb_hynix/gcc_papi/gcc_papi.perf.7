@@ -1,3 +1,6 @@
+/bin/sh: 1: [: perf_event: unexpected operator
+/bin/sh: 1: [: perf_event_uncore: unexpected operator
+ar: creating libtestlib.a
 threads.c: In function ‘_papi_hwi_shutdown_global_threads’:
 threads.c:461:16: warning: variable ‘our_tid’ set but not used [-Wunused-but-set-variable]
   unsigned long our_tid;
@@ -6,9 +9,6 @@ papi_preset.c: In function ‘papi_load_derived_events’:
 papi_preset.c:965:6: warning: variable ‘preset’ set but not used [-Wunused-but-set-variable]
   int preset = 0;
       ^
-/bin/sh: 1: [: perf_event: unexpected operator
-/bin/sh: 1: [: perf_event_uncore: unexpected operator
-ar: creating libtestlib.a
 ar: creating libpapi.a
 threads.c: In function ‘_papi_hwi_shutdown_global_threads’:
 threads.c:461:16: warning: variable ‘our_tid’ set but not used [-Wunused-but-set-variable]
@@ -25,18 +25,18 @@ zero_omp.c:118:6: warning: variable ‘maxthr’ set but not used [-Wunused-but-
 
  Performance counter stats for 'system wide':
 
-       90370401592         cycles                                                      
-      127922887953         instructions              #    1.42  insns per cycle        
-          52494022         cache-misses              #    5.990 % of all cache refs    
-         876411485         cache-references                                            
-           4927.42 MiB     uncore_imc_0/cas_count_read/                                   
-           5946.87 MiB     uncore_imc_0/cas_count_write/                                   
+       91734986153         cycles                                                      
+      128273231248         instructions              #    1.40  insns per cycle        
+          50129583         cache-misses              #    5.738 % of all cache refs    
+         873668356         cache-references                                            
+           4673.16 MiB     uncore_imc_0/cas_count_read/                                   
+           5876.65 MiB     uncore_imc_0/cas_count_write/                                   
               0.00 Joules
  power/energy-cores/                                         
-            692.21 Joules
+            706.30 Joules
  power/energy-pkg/                                           
-             15.70 Joules
+             16.20 Joules
  power/energy-ram/                                           
 
-       9.541854665 seconds time elapsed
+       9.525942299 seconds time elapsed
 

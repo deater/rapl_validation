@@ -25,18 +25,18 @@ zero_omp.c:118:6: warning: variable ‘maxthr’ set but not used [-Wunused-but-
 
  Performance counter stats for 'system wide':
 
-       89046900521         cycles                                                      
-      127653499930         instructions              #    1.43  insns per cycle        
-          52296153         cache-misses              #    5.954 % of all cache refs    
-         878407743         cache-references                                            
-           4889.46 MiB     uncore_imc_0/cas_count_read/                                   
-           5921.76 MiB     uncore_imc_0/cas_count_write/                                   
+       88906386602         cycles                                                      
+      127597127019         instructions              #    1.44  insns per cycle        
+          51746147         cache-misses              #    5.909 % of all cache refs    
+         875791580         cache-references                                            
+           4829.22 MiB     uncore_imc_0/cas_count_read/                                   
+           5973.37 MiB     uncore_imc_0/cas_count_write/                                   
               0.00 Joules
  power/energy-cores/                                         
-            690.56 Joules
+            699.81 Joules
  power/energy-pkg/                                           
-             15.73 Joules
+             15.94 Joules
  power/energy-ram/                                           
 
-       9.493020402 seconds time elapsed
+       9.543648134 seconds time elapsed
 
