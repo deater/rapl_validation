@@ -1,8 +1,10 @@
-haswellian_initial	-- initial results
-haswellian_cohpc2015	-- results put into the (rejected) coHPC workshop paper
-haswellian_espt2015	-- results in the Extreme Scale Programming Tools
-				Workshop Presentation
-			   Also used in the MEMSYS-2016 paper
+old/haswellian_initial		-- initial results
+old/haswellian_cohpc2015	-- results put into the (rejected) coHPC workshop paper
+haswellian-i5			-- current results, based on results
+				   found  in the Extreme Scale Programming Tools
+				   Workshop Presentation
+			           Also used in the MEMSYS-2016 paper
+haswell-ep			-- haswell-ep results (memsys-2016)
 
 Unfortunately there was a gap between gathering the results and writing
 this up, so I will describe as best I can how things were generated.
