@@ -28,10 +28,8 @@ int main(int argc, char **argv) {
 	double total_joules_vdd=0.0;
 	double total_joules_vpp=0.0;
 	double total_time=0.0;
-	double gain_vdd=100.0;
-	double gain_vpp=300.0;
-	double resistor_vdd=0.005;
-	double resistor_vpp=0.010;
+	double gain=100.0;
+	double resistor=0.005;
 
 	if (argc>1) {
 
@@ -58,11 +56,8 @@ int main(int argc, char **argv) {
 	rate=temp_int;
 	printf("(* Rate %d Hz *)\n",rate);
 
-	printf("(* Gain Vdd %lf *)\n",gain_vdd);
-	printf("(* Gain Vpp %lf *)\n",gain_vpp);
-
-	printf("(* Resistor Vdd %lf *)\n",resistor_vdd);
-	printf("(* Resistor Vpp %lf *)\n",resistor_vpp);
+	printf("(* Gain %lf *)\n",gain);
+	printf("(* Resistor %lf *)\n",resistor);
 
 
 	threshold=rate/500;
@@ -95,7 +90,7 @@ int main(int argc, char **argv) {
 		if (done) break;
 
 		if (state==STATE_NONE) {
-			if (points[3]>4.0) {
+			if (points[7]>4.0) {
 				time_in_state++;
 				if (time_in_state>threshold) {
 					state=STATE_DTR_START;
@@ -104,7 +99,7 @@ int main(int argc, char **argv) {
 			}
 		} else if (state==STATE_DTR_START) {
 
-			if (points[3]<-4.0) {
+			if (points[7]<-4.0) {
 				state=STATE_IN_TRACE;
 				printf("Starting Trace %d at %lf\n",
 					trace,
@@ -115,7 +110,7 @@ int main(int argc, char **argv) {
 				time_in_state=0;
 			}
 		} else if (state==STATE_IN_TRACE) {
-			if (points[3]>4.0) {
+			if (points[7]>4.0) {
 				time_in_state++;
 				if (time_in_state>threshold) {
 					state=STATE_DTR_STOP;
@@ -141,7 +136,7 @@ int main(int argc, char **argv) {
 			}
 		}
 		else if (state==STATE_DTR_STOP) {
-			if (points[3]<-4.0) {
+			if (points[7]<-4.0) {
 				state=STATE_NONE;
 				time_in_state=0;
 			}
@@ -155,8 +150,8 @@ int main(int argc, char **argv) {
 			/* V=points[1] */
 			/* I=V/R = (V/AMP)/R = V/100/.005 */
 
-			watts_vdd=((points[0]/gain_vdd)/resistor_vdd)*points[1];
-			watts_vpp=((points[2]/gain_vpp)/resistor_vpp)*2.5;
+			watts_vdd=((points[0]/gain)/resistor)*points[1];
+			watts_vpp=((points[2]/gain)/resistor)*points[3];
 
 #if 0
 			printf("%lf\t%lf\t%lf (* %lf %lf %lf %lf)\n",
@@ -179,15 +174,7 @@ int main(int argc, char **argv) {
 	read(fd,&temp64,8);
 	printf("%06lld)\n",temp64);
 
-	printf("Average Vdd Joules=%lf\tAverage Vdd Watts=%lf\n",
-		(total_joules_vdd)/(double)trace,
-		(total_joules_vdd)/total_time);
-	printf("Average Vpp Joules=%lf\tAverage Vpp Watts=%lf\n",
-		(total_joules_vpp)/(double)trace,
-		(total_joules_vpp)/total_time);
-	printf("Average Total Joules=%lf\tAverage Total Watts=%lf\n",
-		(total_joules_vdd+total_joules_vpp)/(double)trace,
-		(total_joules_vdd+total_joules_vpp)/total_time);
+	printf("Average Joules=%lf\tAverage Watts=%lf\n",(total_joules_vdd+total_joules_vpp)/(double)trace,(total_joules_vdd+total_joules_vpp)/total_time);
 
 	return 0;
 }
