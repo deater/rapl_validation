@@ -3,6 +3,7 @@
 /* to aid in automatically finding the starts of the traces */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <fcntl.h>
 #include <unistd.h>
 #include <math.h>
@@ -16,35 +17,33 @@ int main(int argc, char **argv) {
 
 	int i,result,done=0;
 	int fd,temp_int,rate,channels;
-	float points[8];
-	int ticks=0,trace_ticks=0;
-	double watts_vdd,watts_vpp;
+	float points[4];
+	int ticks=0,trace_ticks=0,sub_ticks=0;
+	double watts;
 	long long temp64;
 	int trace=0;
 	int state=STATE_NONE;
-	double trace_joules_vdd,trace_joules_vpp=0.0;
+	double trace_joules=0.0;
 	int time_in_state=0;
 	int threshold=1;
-	double total_joules_vdd=0.0;
-	double total_joules_vpp=0.0;
+	double total_joules=0.0;
 	double total_time=0.0;
-	double gain_vdd=100.0;
-	double gain_vpp=300.0;
-	double resistor_vdd=0.005;
-	double resistor_vpp=0.010;
+	double gain=300.0;
+	double resistor=0.00333;
+
+	int rate_divider=1;
 
 	if (argc>1) {
 
-		fd=open(argv[1],O_RDONLY);
-		if (fd<1) {
-			fprintf(stderr,"Could not open %s\n",argv[1]);
-			return -1;
-		}
+		rate_divider=atoi(argv[1]);
 	}
 	else {
-		/* stdin */
-		fd=0;
+		rate_divider=1;
 	}
+
+	/* stdin */
+	fd=0;
+
 
 	read(fd,&temp_int,4);
 	printf("(* Version %d *)\n",temp_int);
@@ -58,12 +57,10 @@ int main(int argc, char **argv) {
 	rate=temp_int;
 	printf("(* Rate %d Hz *)\n",rate);
 
-	printf("(* Gain Vdd %lf *)\n",gain_vdd);
-	printf("(* Gain Vpp %lf *)\n",gain_vpp);
+	printf("(* Gain %lf *)\n",gain);
+	printf("(* Resistor %lf *)\n",resistor);
 
-	printf("(* Resistor Vdd %lf *)\n",resistor_vdd);
-	printf("(* Resistor Vpp %lf *)\n",resistor_vpp);
-
+	printf("(* Sample divider %d *)\n",rate_divider);
 
 	threshold=rate/500;
 	if (threshold<1) threshold=1;
@@ -110,8 +107,8 @@ int main(int argc, char **argv) {
 					trace,
 					(double)ticks/(double)rate);
 				trace_ticks=0;
-				trace_joules_vdd=0.0;
-				trace_joules_vpp=0.0;
+				sub_ticks=0;
+				trace_joules=0.0;
 				time_in_state=0;
 			}
 		} else if (state==STATE_IN_TRACE) {
@@ -119,22 +116,16 @@ int main(int argc, char **argv) {
 				time_in_state++;
 				if (time_in_state>threshold) {
 					state=STATE_DTR_STOP;
-					printf("Ending Trace %d at %lfs, %lfs Elapsed\n",
+					printf("Ending Trace %d at %lfs, %lf %lfs Elapsed\n",
 						trace,
 						(double)ticks/(double)rate,
-						(double)trace_ticks/(double)rate);
-					printf("Total VDD Energy: %lfJ Average VDD Power: %lfW\n",
-						trace_joules_vdd,
-						trace_joules_vdd/((double)trace_ticks/(double)rate));
-
-					printf("Total VPP Energy: %lfJ Average VPP Power: %lfW\n",
-						trace_joules_vpp,
-						trace_joules_vpp/((double)trace_ticks/(double)rate));
-
-					total_joules_vdd+=trace_joules_vdd;
-					total_joules_vpp+=trace_joules_vpp;
-
-					total_time+=(double)trace_ticks/(double)rate;
+						(double)trace_ticks,
+						(double)trace_ticks/(double)rate*(double)rate_divider);
+					printf("Total Energy: %lfJ Average Power: %lfW\n",
+						trace_joules,
+						trace_joules/((double)trace_ticks/(double)rate*(double)rate_divider));
+					total_joules+=trace_joules;
+					total_time+=(double)trace_ticks/(double)rate*(double)rate_divider;
 					trace++;
 					time_in_state=0;
 				}
@@ -153,22 +144,26 @@ int main(int argc, char **argv) {
 
 			/* P=IV */
 			/* V=points[1] */
-			/* I=V/R = (V/AMP)/R = V/100/.005 */
+			/* I=V/R = (V/AMP)/R = V/300/.0033 */
 
-			watts_vdd=((points[0]/gain_vdd)/resistor_vdd)*points[1];
-			watts_vpp=((points[2]/gain_vpp)/resistor_vpp)*2.5;
+			watts=((points[0]/gain)/resistor)*points[1];
 
 #if 0
-			printf("%lf\t%lf\t%lf (* %lf %lf %lf %lf)\n",
-				(double)ticks/(double)rate,
-				watts_vdd,
-				watts_vpp,
-				points[0],points[1],points[2],points[3]);
+			printf("%lf\t%lf\t(* %lf %lf *)\n",
+				(double)ticks/(double)rate*(double)rate_divider,
+				watts,
+				points[0],points[1]);
 #endif
-			trace_joules_vdd+=(watts_vdd/rate);
-			trace_joules_vpp+=(watts_vpp/rate);
+//			printf("%d %d\n",sub_ticks,rate_divider);
+			if (sub_ticks==0) {
+				trace_joules+=(watts/(double)rate*(double)rate_divider);
+				trace_ticks++;
+			}
+			sub_ticks++;
+			if (sub_ticks==rate_divider) {
+				sub_ticks=0;
+			}
 
-			trace_ticks++;
 		}
 
 		ticks++;
@@ -179,15 +174,7 @@ int main(int argc, char **argv) {
 	read(fd,&temp64,8);
 	printf("%06lld)\n",temp64);
 
-	printf("Average Vdd Joules=%lf\tAverage Vdd Watts=%lf\n",
-		(total_joules_vdd)/(double)trace,
-		(total_joules_vdd)/total_time);
-	printf("Average Vpp Joules=%lf\tAverage Vpp Watts=%lf\n",
-		(total_joules_vpp)/(double)trace,
-		(total_joules_vpp)/total_time);
-	printf("Average Total Joules=%lf\tAverage Total Watts=%lf\n",
-		(total_joules_vdd+total_joules_vpp)/(double)trace,
-		(total_joules_vdd+total_joules_vpp)/total_time);
+	printf("Average Joules=%lf\tAverage Watts=%lf\n",total_joules/(double)trace,total_joules/total_time);
 
 	return 0;
 }

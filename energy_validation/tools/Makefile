@@ -5,7 +5,8 @@ LFLAGS =
 all:	perf_dram_results \
 	dump_watts_ddr3 dump_watts_ddr4 \
 	dump_trace_daq_ddr4 \
-	debounce_serial perf_dram_results_new
+	debounce_serial perf_dram_results_new \
+	sampling_accuracy
 
 perf_dram_results:	perf_dram_results.o
 	$(CC) $(LFLAGS) -o perf_dram_results perf_dram_results.o
@@ -49,5 +50,12 @@ debounce_serial:	debounce_serial.o
 debounce_serial.o:	debounce_serial.c
 	$(CC) $(CFLAGS) -c debounce_serial.c
 
+
+sampling_accuracy:	sampling_accuracy.o
+	$(CC) $(LFLAGS) -o sampling_accuracy sampling_accuracy.o
+
+sampling_accuracy.o:	sampling_accuracy.c
+	$(CC) $(CFLAGS) -c sampling_accuracy.c
+
 clean:
-	rm -f perf_dram_results_new perf_dram_results dump_watts_ddr3 dump_watts_ddr4 dump_trace_daq_ddr4 debounce_serial *.o *~
+	rm -f perf_dram_results_new perf_dram_results dump_watts_ddr3 dump_watts_ddr4 dump_trace_daq_ddr4 debounce_serial sampling_accuracy *.o *~
