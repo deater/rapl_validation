@@ -1,0 +1,5 @@
+Just ran something like this
+	cat 4gb_samsung/ksp/rapl_results | grep average
+put together by hand (wish had time to automate)
+calculated %diff with HP20S calculator
+
