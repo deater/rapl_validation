@@ -1,0 +1,14 @@
+On pi
+	sudo ./daqflex -b -r1000 -c4 -d -o hpl_mkl.phase.raw
+on haswell-ep
+	./make_phase.sh
+
+
+Then to analysis
+	zcat *.raw.gz | ../../../energy_validation/tools/dump_watts_ddr4
+		to get bounds.  -1 to end
+	zcat *.raw.gz | ../../tools/dump_ddr4_vdd 3.54 60.54 > vdd_trace
+	zcat *.raw.gz | ../../tools/dump_ddr4_vpp 3.54 60.54 > vpp_trace
+	cat hpl_atlas.perf.phase | ../../tools/perf_rapl  > rapl_trace
+
+then merge all into jgraph file

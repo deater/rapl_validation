@@ -1,0 +1,550 @@
+     0.100095399,0.127502,Joules
+,power/energy-ram/,200201860,100.00
+     0.200318482,0.129517,Joules
+,power/energy-ram/,200430584,100.00
+     0.300446649,0.132797,Joules
+,power/energy-ram/,200266337,100.00
+     0.400624820,0.130447,Joules
+,power/energy-ram/,200351011,100.00
+     0.500824541,0.128967,Joules
+,power/energy-ram/,200386569,100.00
+     0.601002302,0.129517,Joules
+,power/energy-ram/,200358162,100.00
+     0.701185419,0.126282,Joules
+,power/energy-ram/,200363538,100.00
+     0.801367965,0.131729,Joules
+,power/energy-ram/,200359890,100.00
+     0.901551573,0.123016,Joules
+,power/energy-ram/,200364338,100.00
+     1.001739172,0.129044,Joules
+,power/energy-ram/,200371192,100.00
+     1.101920434,0.132629,Joules
+,power/energy-ram/,200358379,100.00
+     1.202099255,0.128754,Joules
+,power/energy-ram/,200352519,100.00
+     1.302281943,0.131882,Joules
+,power/energy-ram/,200362052,100.00
+     1.402459272,0.131348,Joules
+,power/energy-ram/,200350577,100.00
+     1.502643993,0.125198,Joules
+,power/energy-ram/,200365459,100.00
+     1.602825799,0.127930,Joules
+,power/energy-ram/,200359521,100.00
+     1.703013026,0.132935,Joules
+,power/energy-ram/,200369553,100.00
+     1.803192137,0.132004,Joules
+,power/energy-ram/,200353822,100.00
+     1.903406556,0.130569,Joules
+,power/energy-ram/,200425440,100.00
+     2.003587922,0.129883,Joules
+,power/energy-ram/,200358075,100.00
+     2.103771613,0.131516,Joules
+,power/energy-ram/,200363050,100.00
+     2.203955083,0.130219,Joules
+,power/energy-ram/,200361947,100.00
+     2.304152448,0.131821,Joules
+,power/energy-ram/,200382767,100.00
+     2.404341689,0.130844,Joules
+,power/energy-ram/,200382517,100.00
+     2.504523653,0.126328,Joules
+,power/energy-ram/,200359947,100.00
+     2.604708409,0.127106,Joules
+,power/energy-ram/,200364908,100.00
+     2.704905806,0.127792,Joules
+,power/energy-ram/,200378335,100.00
+     2.805092567,0.133453,Joules
+,power/energy-ram/,200382274,100.00
+     2.905277663,0.130692,Joules
+,power/energy-ram/,200368402,100.00
+     3.005448550,0.130753,Joules
+,power/energy-ram/,200335401,100.00
+     3.105620787,0.129578,Joules
+,power/energy-ram/,200340364,100.00
+     3.205803233,0.131592,Joules
+,power/energy-ram/,200361218,100.00
+     3.305985093,0.130615,Joules
+,power/energy-ram/,200358952,100.00
+     3.406170027,0.129303,Joules
+,power/energy-ram/,200365936,100.00
+     3.506362416,0.128922,Joules
+,power/energy-ram/,200372717,100.00
+     3.606542709,0.131500,Joules
+,power/energy-ram/,200364686,100.00
+     3.706721467,0.130508,Joules
+,power/energy-ram/,200353478,100.00
+     3.806905457,0.133850,Joules
+,power/energy-ram/,200364063,100.00
+     3.907084020,0.133102,Joules
+,power/energy-ram/,200352788,100.00
+     4.007268186,0.133041,Joules
+,power/energy-ram/,200363707,100.00
+     4.107454333,0.130127,Joules
+,power/energy-ram/,200368636,100.00
+     4.207635743,0.130478,Joules
+,power/energy-ram/,200358401,100.00
+     4.307816239,0.128891,Joules
+,power/energy-ram/,200356542,100.00
+     4.408002310,0.126480,Joules
+,power/energy-ram/,200368462,100.00
+     4.508192334,0.128693,Joules
+,power/energy-ram/,200376154,100.00
+     4.608372790,0.131332,Joules
+,power/energy-ram/,200355990,100.00
+     4.708555757,0.129639,Joules
+,power/energy-ram/,200362573,100.00
+     4.808737679,0.128601,Joules
+,power/energy-ram/,200359733,100.00
+     4.908949722,0.134033,Joules
+,power/energy-ram/,200419839,100.00
+     5.009127876,0.131577,Joules
+,power/energy-ram/,200352232,100.00
+     5.109311571,0.128464,Joules
+,power/energy-ram/,200361909,100.00
+     5.209494117,0.127396,Joules
+,power/energy-ram/,200362161,100.00
+     5.309676968,0.129822,Joules
+,power/energy-ram/,200361554,100.00
+     5.409859996,0.132416,Joules
+,power/energy-ram/,200361770,100.00
+     5.510045196,0.132141,Joules
+,power/energy-ram/,200365828,100.00
+     5.610230256,0.129959,Joules
+,power/energy-ram/,200366118,100.00
+     5.710427955,0.128586,Joules
+,power/energy-ram/,200379792,100.00
+     5.810610332,0.130951,Joules
+,power/energy-ram/,200372165,100.00
+     5.910813958,0.128540,Joules
+,power/energy-ram/,200390789,100.00
+     6.010994694,0.131363,Joules
+,power/energy-ram/,200369775,100.00
+     6.111195891,0.132141,Joules
+,power/energy-ram/,200398664,100.00
+     6.211466454,0.131607,Joules
+,power/energy-ram/,200536775,100.00
+     6.311649698,0.131088,Joules
+,power/energy-ram/,200361795,100.00
+     6.411835607,0.129059,Joules
+,power/energy-ram/,200368433,100.00
+     6.512019287,0.129791,Joules
+,power/energy-ram/,200362526,100.00
+     6.612204395,0.133316,Joules
+,power/energy-ram/,200366318,100.00
+     6.712387378,0.129486,Joules
+,power/energy-ram/,200361314,100.00
+     6.812583347,0.132233,Joules
+,power/energy-ram/,200376073,100.00
+     6.912770023,0.131973,Joules
+,power/energy-ram/,200381587,100.00
+     7.012951668,0.131256,Joules
+,power/energy-ram/,200358780,100.00
+     7.113130968,0.131409,Joules
+,power/energy-ram/,200355108,100.00
+     7.213269576,0.139023,Joules
+,power/energy-ram/,200270841,100.00
+     7.313449649,0.270187,Joules
+,power/energy-ram/,200347522,100.00
+     7.413733986,0.319656,Joules
+,power/energy-ram/,200539174,100.00
+     7.514078562,0.325180,Joules
+,power/energy-ram/,200696609,100.00
+     7.614428257,0.334747,Joules
+,power/energy-ram/,200686204,100.00
+     7.714719429,0.324631,Joules
+,power/energy-ram/,200595456,100.00
+     7.814918801,0.258926,Joules
+,power/energy-ram/,200406692,100.00
+     7.915183687,0.305573,Joules
+,power/energy-ram/,200504029,100.00
+     8.015566473,0.328156,Joules
+,power/energy-ram/,200772781,100.00
+     8.115878789,0.331024,Joules
+,power/energy-ram/,200602907,100.00
+     8.216204110,0.336365,Joules
+,power/energy-ram/,200656741,100.00
+     8.316477105,0.326904,Joules
+,power/energy-ram/,200552469,100.00
+     8.416668220,0.274933,Joules
+,power/energy-ram/,200384699,100.00
+     8.516906243,0.326538,Joules
+,power/energy-ram/,200439195,100.00
+     8.617279074,0.328262,Joules
+,power/energy-ram/,200753709,100.00
+     8.717631947,0.317673,Joules
+,power/energy-ram/,200710841,100.00
+     8.817992142,0.325546,Joules
+,power/energy-ram/,200721688,100.00
+     8.918246296,0.276550,Joules
+,power/energy-ram/,200511572,100.00
+     9.018482439,0.319885,Joules
+,power/energy-ram/,200444980,100.00
+     9.118867847,0.329208,Joules
+,power/energy-ram/,200755340,100.00
+     9.219582901,0.326569,Joules
+,power/energy-ram/,201149268,100.00
+     9.319895108,0.336365,Joules
+,power/energy-ram/,200926823,100.00
+     9.420162303,0.274216,Joules
+,power/energy-ram/,200533594,100.00
+     9.520405230,0.313980,Joules
+,power/energy-ram/,200470606,100.00
+     9.620716852,0.330765,Joules
+,power/energy-ram/,200623683,100.00
+     9.721025928,0.326309,Joules
+,power/energy-ram/,200594881,100.00
+     9.821337876,0.329697,Joules
+,power/energy-ram/,200645944,100.00
+     9.921661535,0.286270,Joules
+,power/energy-ram/,200644871,100.00
+    10.021916896,0.316757,Joules
+,power/energy-ram/,200461859,100.00
+    10.122231579,0.323502,Joules
+,power/energy-ram/,200667192,100.00
+    10.222583181,0.335495,Joules
+,power/energy-ram/,200686051,100.00
+    10.322932100,0.337296,Joules
+,power/energy-ram/,200678436,100.00
+    10.423200346,0.286728,Joules
+,power/energy-ram/,200560497,100.00
+    10.523465774,0.322128,Joules
+,power/energy-ram/,200523158,100.00
+    10.623808571,0.327271,Joules
+,power/energy-ram/,200679157,100.00
+    10.724133663,0.328751,Joules
+,power/energy-ram/,200649719,100.00
+    10.824441034,0.326767,Joules
+,power/energy-ram/,200612690,100.00
+    10.924692281,0.268997,Joules
+,power/energy-ram/,200498218,100.00
+    11.024952915,0.328140,Joules
+,power/energy-ram/,200486206,100.00
+    11.125281823,0.331161,Joules
+,power/energy-ram/,200673902,100.00
+    11.225648183,0.334167,Joules
+,power/energy-ram/,200706085,100.00
+    11.325920121,0.317062,Joules
+,power/energy-ram/,200577487,100.00
+    11.426177795,0.280380,Joules
+,power/energy-ram/,200508509,100.00
+    11.526663185,0.332916,Joules
+,power/energy-ram/,200964023,100.00
+    11.627020248,0.321579,Joules
+,power/energy-ram/,200690169,100.00
+    11.727367309,0.319778,Joules
+,power/energy-ram/,200694160,100.00
+    11.827662312,0.272766,Joules
+,power/energy-ram/,200601167,100.00
+    11.927894799,0.319214,Joules
+,power/energy-ram/,200451508,100.00
+    12.028350566,0.334396,Joules
+,power/energy-ram/,200890362,100.00
+    12.128652280,0.334106,Joules
+,power/energy-ram/,200625177,100.00
+    12.228899614,0.282150,Joules
+,power/energy-ram/,200496035,100.00
+    12.329109693,0.312744,Joules
+,power/energy-ram/,200412995,100.00
+    12.429409746,0.330978,Joules
+,power/energy-ram/,200585355,100.00
+    12.529727669,0.334717,Joules
+,power/energy-ram/,200631631,100.00
+    12.629975629,0.285904,Joules
+,power/energy-ram/,200501718,100.00
+    12.730219098,0.312820,Joules
+,power/energy-ram/,200440841,100.00
+    12.830577025,0.328125,Joules
+,power/energy-ram/,200737035,100.00
+    12.930922513,0.331848,Joules
+,power/energy-ram/,200690608,100.00
+    13.031173541,0.289352,Joules
+,power/energy-ram/,200510388,100.00
+    13.131447311,0.323929,Joules
+,power/energy-ram/,200519354,100.00
+    13.231765202,0.328156,Joules
+,power/energy-ram/,200631530,100.00
+    13.332063693,0.326263,Joules
+,power/energy-ram/,200618226,100.00
+    13.432341295,0.283890,Joules
+,power/energy-ram/,200522425,100.00
+    13.532720082,0.330093,Joules
+,power/energy-ram/,200760922,100.00
+    13.633058283,0.334671,Joules
+,power/energy-ram/,200686191,100.00
+    13.733304795,0.297546,Joules
+,power/energy-ram/,200495925,100.00
+    13.833539250,0.313278,Joules
+,power/energy-ram/,200463369,100.00
+    13.933885026,0.334885,Joules
+,power/energy-ram/,200689342,100.00
+    14.034174722,0.326187,Joules
+,power/energy-ram/,200568936,100.00
+    14.134508675,0.274658,Joules
+,power/energy-ram/,200600708,100.00
+    14.234928932,0.334808,Joules
+,power/energy-ram/,200902147,100.00
+    14.335503999,0.330826,Joules
+,power/energy-ram/,201127851,100.00
+    14.435796381,0.289413,Joules
+,power/energy-ram/,200599227,100.00
+    14.536061107,0.333099,Joules
+,power/energy-ram/,200498701,100.00
+    14.636418313,0.332458,Joules
+,power/energy-ram/,200720562,100.00
+    14.736695707,0.290680,Joules
+,power/energy-ram/,200569385,100.00
+    14.836934270,0.325760,Joules
+,power/energy-ram/,200470696,100.00
+    14.937390906,0.326080,Joules
+,power/energy-ram/,200899458,100.00
+    15.037680731,0.299393,Joules
+,power/energy-ram/,200587746,100.00
+    15.137911779,0.318787,Joules
+,power/energy-ram/,200450093,100.00
+    15.238219560,0.333221,Joules
+,power/energy-ram/,200611784,100.00
+    15.338461162,0.285767,Joules
+,power/energy-ram/,200485638,100.00
+    15.438705376,0.328079,Joules
+,power/energy-ram/,200478452,100.00
+    15.539030882,0.322861,Joules
+,power/energy-ram/,200618864,100.00
+    15.639312301,0.294662,Joules
+,power/energy-ram/,200565933,100.00
+    15.739623025,0.322479,Joules
+,power/energy-ram/,200633131,100.00
+    15.839876276,0.322250,Joules
+,power/energy-ram/,200516048,100.00
+    15.940103814,0.288498,Joules
+,power/energy-ram/,200430545,100.00
+    16.040461868,0.329651,Joules
+,power/energy-ram/,200715650,100.00
+    16.140725393,0.295731,Joules
+,power/energy-ram/,200534773,100.00
+    16.240981125,0.324677,Joules
+,power/energy-ram/,200490338,100.00
+    16.341310659,0.331253,Joules
+,power/energy-ram/,200668610,100.00
+    16.441622475,0.281555,Joules
+,power/energy-ram/,200572006,100.00
+    16.541984009,0.332382,Joules
+,power/energy-ram/,200753972,100.00
+    16.642247594,0.290619,Joules
+,power/energy-ram/,200542737,100.00
+    16.742516733,0.331940,Joules
+,power/energy-ram/,200515204,100.00
+    16.842773255,0.303192,Joules
+,power/energy-ram/,200524448,100.00
+    16.943023598,0.325531,Joules
+,power/energy-ram/,200492880,100.00
+    17.043284637,0.316299,Joules
+,power/energy-ram/,200525218,100.00
+    17.143516257,0.316010,Joules
+,power/energy-ram/,200435405,100.00
+    17.243753850,0.301376,Joules
+,power/energy-ram/,200496378,100.00
+    17.343966636,0.322113,Joules
+,power/energy-ram/,200395604,100.00
+    17.444210921,0.291122,Joules
+,power/energy-ram/,200504691,100.00
+    17.544431933,0.328140,Joules
+,power/energy-ram/,200413937,100.00
+    17.644765153,0.287643,Joules
+,power/energy-ram/,200682379,100.00
+    17.745106917,0.325974,Joules
+,power/energy-ram/,200671445,100.00
+    17.845437283,0.297791,Joules
+,power/energy-ram/,200647694,100.00
+    17.945712546,0.310394,Joules
+,power/energy-ram/,200567597,100.00
+    18.046003851,0.324265,Joules
+,power/energy-ram/,200553160,100.00
+    18.146353218,0.293594,Joules
+,power/energy-ram/,200689854,100.00
+    18.246603051,0.305527,Joules
+,power/energy-ram/,200526381,100.00
+    18.346771079,0.319214,Joules
+,power/energy-ram/,200335444,100.00
+    18.446990393,0.308624,Joules
+,power/energy-ram/,200416189,100.00
+    18.547290728,0.309692,Joules
+,power/energy-ram/,200605344,100.00
+    18.647630221,0.309525,Joules
+,power/energy-ram/,200649145,100.00
+    18.747942570,0.306076,Joules
+,power/energy-ram/,200637808,100.00
+    18.848278814,0.312546,Joules
+,power/energy-ram/,200661122,100.00
+    18.948559208,0.316727,Joules
+,power/energy-ram/,200577400,100.00
+    19.048795304,0.300171,Joules
+,power/energy-ram/,200472938,100.00
+    19.149008791,0.305878,Joules
+,power/energy-ram/,200396440,100.00
+    19.249226775,0.286469,Joules
+,power/energy-ram/,200453948,100.00
+    19.349420251,0.291458,Joules
+,power/energy-ram/,200383821,100.00
+    19.449612217,0.289154,Joules
+,power/energy-ram/,200373785,100.00
+    19.549777374,0.227646,Joules
+,power/energy-ram/,200334563,100.00
+    19.649916981,0.287109,Joules
+,power/energy-ram/,200276321,100.00
+    19.750065353,0.161133,Joules
+,power/energy-ram/,200298524,100.00
+    19.850203934,0.166107,Joules
+,power/energy-ram/,200270228,100.00
+    19.950372594,0.160873,Joules
+,power/energy-ram/,200332085,100.00
+    20.050711362,0.166473,Joules
+,power/energy-ram/,200676072,100.00
+    20.150859744,0.166718,Joules
+,power/energy-ram/,200289814,100.00
+    20.251028845,0.166458,Joules
+,power/energy-ram/,200334154,100.00
+    20.351196009,0.166519,Joules
+,power/energy-ram/,200330416,100.00
+    20.451417872,0.164856,Joules
+,power/energy-ram/,200439360,100.00
+    20.551589859,0.163391,Joules
+,power/energy-ram/,200339794,100.00
+    20.651760319,0.163193,Joules
+,power/energy-ram/,200336710,100.00
+    20.751929059,0.162796,Joules
+,power/energy-ram/,200333263,100.00
+    20.852098512,0.164505,Joules
+,power/energy-ram/,200334914,100.00
+    20.952273973,0.166199,Joules
+,power/energy-ram/,200346863,100.00
+    21.052445783,0.166306,Joules
+,power/energy-ram/,200342126,100.00
+    21.152592206,0.164734,Joules
+,power/energy-ram/,200285727,100.00
+    21.252743860,0.162628,Joules
+,power/energy-ram/,200302348,100.00
+    21.352888350,0.166748,Joules
+,power/energy-ram/,200281494,100.00
+    21.453056966,0.166168,Joules
+,power/energy-ram/,200333400,100.00
+    21.553225328,0.166962,Joules
+,power/energy-ram/,200332327,100.00
+    21.653401282,0.158447,Joules
+,power/energy-ram/,200348084,100.00
+    21.753572404,0.164551,Joules
+,power/energy-ram/,200337954,100.00
+    21.853751384,0.161819,Joules
+,power/energy-ram/,200344198,100.00
+    21.953897392,0.166321,Joules
+,power/energy-ram/,200297506,100.00
+    22.054066024,0.162888,Joules
+,power/energy-ram/,200333225,100.00
+    22.154235894,0.165924,Joules
+,power/energy-ram/,200335633,100.00
+    22.254390021,0.166489,Joules
+,power/energy-ram/,200306729,100.00
+    22.354535409,0.158188,Joules
+,power/energy-ram/,200284165,100.00
+    22.454704833,0.164719,Joules
+,power/energy-ram/,200334534,100.00
+    22.554887463,0.162918,Joules
+,power/energy-ram/,200350718,100.00
+    22.655034682,0.162933,Joules
+,power/energy-ram/,200300947,100.00
+    22.755202125,0.164719,Joules
+,power/energy-ram/,200333098,100.00
+    22.855366125,0.164658,Joules
+,power/energy-ram/,200323559,100.00
+    22.955510114,0.165146,Joules
+,power/energy-ram/,200281178,100.00
+    23.055677282,0.163116,Joules
+,power/energy-ram/,200330652,100.00
+    23.155846659,0.166489,Joules
+,power/energy-ram/,200334245,100.00
+    23.256015415,0.164536,Joules
+,power/energy-ram/,200333122,100.00
+    23.356186029,0.161530,Joules
+,power/energy-ram/,200337542,100.00
+    23.456362814,0.165146,Joules
+,power/energy-ram/,200349419,100.00
+    23.556531797,0.165970,Joules
+,power/energy-ram/,200333835,100.00
+    23.656699976,0.162430,Joules
+,power/energy-ram/,200332069,100.00
+    23.756868852,0.164841,Joules
+,power/energy-ram/,200333591,100.00
+    23.857038425,0.163208,Joules
+,power/energy-ram/,200335178,100.00
+    23.957222182,0.166260,Joules
+,power/energy-ram/,200363230,100.00
+    24.057390882,0.164886,Joules
+,power/energy-ram/,200333384,100.00
+    24.157549130,0.163162,Joules
+,power/energy-ram/,200314987,100.00
+    24.257699475,0.164673,Joules
+,power/energy-ram/,200296261,100.00
+    24.357847807,0.164841,Joules
+,power/energy-ram/,200292702,100.00
+    24.457992447,0.162827,Joules
+,power/energy-ram/,200282414,100.00
+    24.558163405,0.164825,Joules
+,power/energy-ram/,200337993,100.00
+    24.658338999,0.163818,Joules
+,power/energy-ram/,200346821,100.00
+    24.758489864,0.161835,Joules
+,power/energy-ram/,200300625,100.00
+    24.858634496,0.166245,Joules
+,power/energy-ram/,200282250,100.00
+    24.958803182,0.166748,Joules
+,power/energy-ram/,200333221,100.00
+    25.058977669,0.161270,Joules
+,power/energy-ram/,200347809,100.00
+    25.159123097,0.166245,Joules
+,power/energy-ram/,200284115,100.00
+    25.259290842,0.163956,Joules
+,power/energy-ram/,200331083,100.00
+    25.359460736,0.161560,Joules
+,power/energy-ram/,200335312,100.00
+    25.459638698,0.166748,Joules
+,power/energy-ram/,200328751,100.00
+    25.559784238,0.164642,Joules
+,power/energy-ram/,200309978,100.00
+    25.659952272,0.164398,Joules
+,power/energy-ram/,200331962,100.00
+    25.760121739,0.166550,Joules
+,power/energy-ram/,200334649,100.00
+    25.860296953,0.159927,Joules
+,power/energy-ram/,200346648,100.00
+    25.960463483,0.166748,Joules
+,power/energy-ram/,200329031,100.00
+    26.060630370,0.161316,Joules
+,power/energy-ram/,200329723,100.00
+    26.160800747,0.167130,Joules
+,power/energy-ram/,200336308,100.00
+    26.260979365,0.175232,Joules
+,power/energy-ram/,200353050,100.00
+    26.361146096,0.170334,Joules
+,power/energy-ram/,200329454,100.00
+    26.461319042,0.170776,Joules
+,power/energy-ram/,200344505,100.00
+    26.561465940,0.172455,Joules
+,power/energy-ram/,200286959,100.00
+    26.661642823,0.169830,Joules
+,power/energy-ram/,200352036,100.00
+    26.761792699,0.173416,Joules
+,power/energy-ram/,200292923,100.00
+    26.861962977,0.172104,Joules
+,power/energy-ram/,200336115,100.00
+    26.962132050,0.172668,Joules
+,power/energy-ram/,200334294,100.00
+    27.062297990,0.173126,Joules
+,power/energy-ram/,200327843,100.00
+    27.162469969,0.229141,Joules
+,power/energy-ram/,200339558,100.00
+    27.262637670,0.235092,Joules
+,power/energy-ram/,200331118,100.00
+    27.363192292,0.308319,Joules
+,power/energy-ram/,201002059,100.00
+    27.464430970,0.285767,Joules
+,power/energy-ram/,202573487,100.00
+    27.496190684,0.056641,Joules
+,power/energy-ram/,63522705,100.00
