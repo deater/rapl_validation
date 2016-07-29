@@ -9,7 +9,7 @@ Y 6
 legend custom
 
 title
-font Helvetica fontsize 14 y 3.6 : Haswell-i7 DDR3
+font Helvetica fontsize 14 x 2.0 y 3.6 : Haswell-i7 DDR3
 
 
 (* X-Axis *)
@@ -32,7 +32,7 @@ pts
 
 newcurve
 marktype none linetype none
-label x 0.1 y 3.6 vjc hjl font Helvetica fontsize 12 : Micron \
+label x 0.0 y 3.6 vjc hjl font Helvetica fontsize 12 : Micron \
 8GB
 
 (* sleep 8GB Micron *)
@@ -68,16 +68,6 @@ pts
 1.165596	1.713946
 1.157120	1.705326
 1.161172	1.710946
-
-
-
-
-
-
-
-
-
-
 
 (* gcc 8GB Micron *)
 (* daq		rapl *)
@@ -173,14 +163,21 @@ pts
 
 newcurve
 marktype none linetype none
-label x 0.8 y 3.6 vjc hjl font Helvetica fontsize 12 : Hynix\
+label x 0.4 y 3.6 vjc hjl font Helvetica fontsize 12 : Hynix\
 4GB
 
 (* sleep 4GB Hynix *)
 (* daq		rapl *)
 newcurve marktype circle
 color 0.0 0.0 0.5 linetype none
-label x 0.75 y 3.5 vjc hjl font Helveitca fontsize 12 : sleep
+label x 0.5 y 3.4 vjc hjl font Helveitca fontsize 12 : 
+pts
+
+(* ksp 4GB Hynix *)
+(* daq		rapl *)
+newcurve marktype x
+color 0.0 0.0 0.5 linetype none
+label x 0.5 y 3.3 vjc hjl font Helveitca fontsize 12 : 
 pts
 
 
@@ -188,7 +185,7 @@ pts
 (* daq		rapl *)
 newcurve marktype cross
 color 0.0 0.0 0.6 linetype none
-label x 0.75 y 3.4 vjc hjl font Helveitca fontsize 12 : gcc
+label x 0.5 y 3.2 vjc hjl font Helveitca fontsize 12 : 
 pts
 
 
@@ -196,7 +193,7 @@ pts
 (* daq		rapl *)
 newcurve marktype diamond
 color 0.0 0.0 0.7 linetype none
-label x 0.75 y 3.3 vjc hjl font Helveitca fontsize 12 : hpl_openblas
+label x 0.5 y 3.1 vjc hjl font Helveitca fontsize 12 : 
 pts
 
 
@@ -204,23 +201,87 @@ pts
 (* daq		rapl *)
 newcurve marktype ellipse
 color 0.0 0.0 0.8 linetype none
-label x 0.75 y 3.2 vjc hjl font Helveitca fontsize 12 : hpl_atlas
+label x 0.5 y 3.0 vjc hjl font Helveitca fontsize 12 : 
 pts
 
 
 (* hpl_mkl 4GB Hynix *)
 (* daq		rapl *)
 newcurve marktype triangle
-color 0.0 0.0 0.7 linetype none
-label x 0.75 y 3.1 vjc hjl font Helveitca fontsize 12 : hpl_mkl
+color 0.0 0.0 0.9 linetype none
+label x 0.5 y 2.9 vjc hjl font Helveitca fontsize 12 : 
 pts
 
 
 (* stream 4GB Hynix *)
 (* daq		rapl *)
 newcurve marktype box
-color 0.0 0.0 0.6 linetype none
-label x 0.75 y 3.0 vjc hjl font Helveitca fontsize 12 : stream
+color 0.0 0.0 1.0 linetype none
+label x 0.5 y 2.8 vjc hjl font Helveitca fontsize 12 : 
+pts
+
+
+
+
+
+
+newcurve
+marktype none linetype none
+label x 0.8 y 3.6 vjc hjl font Helvetica fontsize 12 : Samsung\
+4GB
+
+(* sleep 4GB Samsung *)
+(* daq		rapl *)
+newcurve marktype circle
+color 0.4 0.0 0.4 linetype none
+label x 0.8 y 3.4 vjc hjl font Helveitca fontsize 12 : sleep
+pts
+
+(* ksp 4GB Samsung *)
+(* daq		rapl *)
+newcurve marktype x
+color 0.5 0.0 0.5 linetype none
+label x 0.8 y 3.3 vjc hjl font Helveitca fontsize 12 : ksp
+pts
+
+
+(* gcc 4GB Samsung *)
+(* daq		rapl *)
+newcurve marktype cross
+color 0.6 0.0 0.6 linetype none
+label x 0.8 y 3.2 vjc hjl font Helveitca fontsize 12 : gcc
+pts
+
+
+(* hpl_openblas 4GB Samsung *)
+(* daq		rapl *)
+newcurve marktype diamond
+color 0.7 0.0 0.7 linetype none
+label x 0.8 y 3.1 vjc hjl font Helveitca fontsize 12 : hpl_openblas
+pts
+
+
+(* hpl_atlas 4GB Samsung *)
+(* daq		rapl *)
+newcurve marktype ellipse
+color 0.8 0.0 0.8 linetype none
+label x 0.8 y 3.0 vjc hjl font Helveitca fontsize 12 : hpl_atlas
+pts
+
+
+(* hpl_mkl 4GB Samsung *)
+(* daq		rapl *)
+newcurve marktype triangle
+color 0.9 0.0 0.9 linetype none
+label x 0.8 y 2.9 vjc hjl font Helveitca fontsize 12 : hpl_mkl
+pts
+
+
+(* stream 4GB Samsung *)
+(* daq		rapl *)
+newcurve marktype box
+color 1.0 0.0 1.0 linetype none
+label x 0.8 y 2.8 vjc hjl font Helveitca fontsize 12 : stream
 pts
 
 
