@@ -2,3 +2,7 @@ Made by hand
 
 based on graphs made by Thomas Ilsche
 
+
+Needs "jgraph" (the one by Jim Planck, not anything to do with java).
+On debian "apt-get install jgraph"
+

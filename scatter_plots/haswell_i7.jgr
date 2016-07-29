@@ -1,0 +1,235 @@
+(* Begin Graph *)
+newgraph
+
+X 6
+Y 6
+
+(* Legend *)
+(* legend defaults font Helvetica fontsize 12 x 1 y 16 vjt hjl *)
+legend custom
+
+title
+font Helvetica fontsize 14 y 3.6 : Haswell-i7 DDR3
+
+
+(* X-Axis *)
+xaxis min 0 max 3.5
+size 5
+hash_labels font Helvetica fontsize 12
+label font Helvetica fontsize 12  : daq (W)
+
+(* Y-Axis *)
+yaxis min 0 max 3.5
+size 5
+grid_gray 0.9 grid_lines
+label font Helvetica fontsize 12  : RAPL (W)
+hash_labels font Helvetica fontsize 12
+
+newcurve marktype none color 0.8 0.8 0.8 linetype dashed
+pts
+0	0
+3.5	3.5
+
+newcurve
+marktype none linetype none
+label x 0.1 y 3.6 vjc hjl font Helvetica fontsize 12 : Micron \
+8GB
+
+(* sleep 8GB Micron *)
+(* daq		rapl *)
+newcurve marktype circle
+color 0.4 0.0 0.0 linetype none
+label x 0.2 y 3.4 vjc hjl font Helveitca fontsize 12 : 
+pts
+0.337000	0.838087
+0.333777	0.837670
+0.332050	0.837512
+0.330869	0.837674
+0.331594	0.837680
+0.332992	0.838616
+0.330701	0.838602
+0.331398	0.837653
+0.331417	0.838651
+0.329681	0.837569
+
+(* ksp 8GB Micron *)
+(* daq		rapl *)
+newcurve marktype x
+color 0.5 0.0 0.0 linetype none
+label x 0.2 y 3.3 vjc hjl font Helveitca fontsize 12 : 
+pts
+1.218992	1.777940
+1.155026	1.706380
+1.154681	1.708947
+1.166632	1.719407
+1.161933	1.712946
+1.165022	1.715935
+1.162401	1.712947
+1.165596	1.713946
+1.157120	1.705326
+1.161172	1.710946
+
+
+
+
+
+
+
+
+
+
+
+(* gcc 8GB Micron *)
+(* daq		rapl *)
+newcurve marktype cross
+color 0.6 0.0 0.0 linetype none
+label x 0.2 y 3.2 vjc hjl font Helveitca fontsize 12 : 
+pts
+0.965688	1.452249
+1.155501	1.660142
+1.146845	1.654416
+1.132792	1.638652
+1.129022	1.635529
+1.133902	1.638086
+1.142939	1.648178
+1.133436	1.638413
+1.156517	1.665562
+1.123214	1.631668
+
+(* hpl_openblas 8GB Micron *)
+(* daq		rapl *)
+newcurve marktype diamond
+color 0.7 0.0 0.0 linetype none
+label x 0.2 y 3.1 vjc hjl font Helveitca fontsize 12 : 
+pts
+1.913507	2.334155
+1.915051	2.331405
+1.843341	2.267996
+1.884618	2.304513
+1.875341	2.291397
+1.905629	2.319245
+1.877323	2.293652
+1.882386	2.275037
+1.931206	2.327395
+1.857088	2.277014
+
+(* hpl_atlas 8GB Micron *)
+(* daq		rapl *)
+newcurve marktype ellipse
+color 0.8 0.0 0.0 linetype none
+label x 0.2 y 3.0 vjc hjl font Helveitca fontsize 12 : 
+pts
+1.914073	2.241503
+1.918416	2.242707
+1.916437	2.242958
+1.894353	2.220206
+1.831041	2.163947
+1.887389	2.213322
+1.886720	2.215191
+1.891353	2.218770
+1.885813	2.214273
+1.886268	2.214492
+
+(* hpl_mkl 8GB Micron *)
+(* daq		rapl *)
+newcurve marktype triangle
+color 0.9 0.0 0.0 linetype none
+label x 0.2 y 2.9 vjc hjl font Helveitca fontsize 12 : 
+pts
+2.504627	3.004807
+2.472475	2.970048
+2.498933	2.998807
+2.400353	2.891750
+2.470008	2.968563
+2.512141	3.006402
+2.491796	2.986267
+2.500566	2.997466
+2.486754	2.980087
+2.500154	2.993764
+
+(* stream 8GB Micron *)
+(* daq		rapl *)
+newcurve marktype box
+color 1.0 0.0 0.0 linetype none
+label x 0.2 y 2.8 vjc hjl font Helveitca fontsize 12 : 
+pts
+2.643618	3.223711
+2.675459	3.256603
+2.652850	3.231123
+2.691306	3.273061
+2.665574	3.242820
+2.694922	3.273440
+2.670684	3.244452
+2.697208	3.273292
+2.679840	3.256781
+2.658822	3.234513
+
+
+
+
+
+
+
+
+newcurve
+marktype none linetype none
+label x 0.8 y 3.6 vjc hjl font Helvetica fontsize 12 : Hynix\
+4GB
+
+(* sleep 4GB Hynix *)
+(* daq		rapl *)
+newcurve marktype circle
+color 0.0 0.0 0.5 linetype none
+label x 0.75 y 3.5 vjc hjl font Helveitca fontsize 12 : sleep
+pts
+
+
+(* gcc 4GB Hynix *)
+(* daq		rapl *)
+newcurve marktype cross
+color 0.0 0.0 0.6 linetype none
+label x 0.75 y 3.4 vjc hjl font Helveitca fontsize 12 : gcc
+pts
+
+
+(* hpl_openblas 4GB Hynix *)
+(* daq		rapl *)
+newcurve marktype diamond
+color 0.0 0.0 0.7 linetype none
+label x 0.75 y 3.3 vjc hjl font Helveitca fontsize 12 : hpl_openblas
+pts
+
+
+(* hpl_atlas 4GB Hynix *)
+(* daq		rapl *)
+newcurve marktype ellipse
+color 0.0 0.0 0.8 linetype none
+label x 0.75 y 3.2 vjc hjl font Helveitca fontsize 12 : hpl_atlas
+pts
+
+
+(* hpl_mkl 4GB Hynix *)
+(* daq		rapl *)
+newcurve marktype triangle
+color 0.0 0.0 0.7 linetype none
+label x 0.75 y 3.1 vjc hjl font Helveitca fontsize 12 : hpl_mkl
+pts
+
+
+(* stream 4GB Hynix *)
+(* daq		rapl *)
+newcurve marktype box
+color 0.0 0.0 0.6 linetype none
+label x 0.75 y 3.0 vjc hjl font Helveitca fontsize 12 : stream
+pts
+
+
+
+
+
+
+
+
+
+
+
