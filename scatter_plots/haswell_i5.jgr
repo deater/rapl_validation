@@ -319,6 +319,7 @@ pts
 
 
 
+
 newcurve
 marktype none linetype none
 label x 0.8 y 3.6 vjc hjl font Helvetica fontsize 12 : Samsung\
@@ -330,6 +331,16 @@ newcurve marktype circle
 color 0.3 0.3 0.0 linetype none
 label x 0.8 y 3.4 vjc hjl font Helveitca fontsize 12 : sleep
 pts
+0.616121	0.463760
+0.645576	0.463721
+0.672124	0.463729
+0.664273	0.463738
+0.665063	0.463540
+0.670191	0.463708
+0.671248	0.463620
+0.661906	0.463629
+0.669533	0.463671
+0.654041	0.463696
 
 
 (* opencl 4GB Samsung *)
@@ -338,6 +349,16 @@ newcurve marktype triangle mrotate 180.0
 color 0.4 0.4 0.0 linetype none
 label x 0.8 y 3.3 vjc hjl font Helveitca fontsize 12 : opencl
 pts
+1.142094	0.789588
+1.188950	0.834896
+1.176950	0.824903
+1.170573	0.826977
+1.170656	0.829114
+1.163649	0.819614
+1.171007	0.827721
+1.173661	0.831720
+1.172881	0.830721
+1.172664	0.829771
 
 (* gcc 4GB Samsung *)
 (* daq		rapl *)
@@ -345,7 +366,16 @@ newcurve marktype cross
 color 0.5 0.5 0.0 linetype none
 label x 0.8 y 3.2 vjc hjl font Helveitca fontsize 12 : gcc
 pts
-
+1.206974	0.914557
+1.441869	1.142342
+1.433021	1.139009
+1.409231	1.138313
+1.431683	1.148836
+1.446966	1.151694
+1.448755	1.158510
+1.414515	1.118542
+1.396071	1.110104
+1.408552	1.133652
 
 (* ksp 4GB Samsung *)
 (* daq		rapl *)
@@ -353,7 +383,16 @@ newcurve marktype x
 color 0.6 0.6 0.0 linetype none
 label x 0.8 y 3.1 vjc hjl font Helveitca fontsize 12 : ksp
 pts
-
+1.500189	1.269689
+1.482108	1.252452
+1.470911	1.240390
+1.474793	1.240449
+1.468993	1.238939
+1.468191	1.231449
+1.478757	1.248432
+1.485222	1.252450
+1.469854	1.232856
+1.474279	1.239929
 
 (* hpl_openblas 4GB Samsung *)
 (* daq		rapl *)
@@ -361,7 +400,16 @@ newcurve marktype diamond
 color 0.7 0.7 0.0 linetype none
 label x 0.8 y 3.0 vjc hjl font Helveitca fontsize 12 : hpl_openblas
 pts
-
+1.567292	1.531414
+1.632334	1.563536
+1.686183	1.541640
+1.677648	1.520025
+1.668955	1.561917
+1.636688	1.549142
+1.676230	1.591407
+1.657619	1.580962
+1.680809	1.585830
+1.675184	1.533223
 
 (* hpl_atlas 4GB Samsung *)
 (* daq		rapl *)
@@ -369,7 +417,16 @@ newcurve marktype ellipse
 color 0.8 0.8 0.0 linetype none
 label x 0.8 y 2.9 vjc hjl font Helveitca fontsize 12 : hpl_atlas
 pts
-
+1.883687	1.632404
+1.884874	1.625227
+1.887956	1.629137
+1.879606	1.628836
+1.870745	1.628616
+1.873081	1.628882
+1.932262	1.629664
+1.946004	1.628996
+1.909637	1.631552
+1.890198	1.627812
 
 (* hpl_mkl 4GB Samsung *)
 (* daq		rapl *)
@@ -377,7 +434,16 @@ newcurve marktype triangle
 color 0.9 0.9 0.0 linetype none
 label x 0.8 y 2.8 vjc hjl font Helveitca fontsize 12 : hpl_mkl
 pts
-
+2.206714	2.311775
+2.185101	2.287004
+2.187846	2.295246
+2.191465	2.291764
+2.191002	2.290961
+2.181328	2.295551
+2.162912	2.291538
+2.145748	2.293353
+2.130139	2.284689
+2.143781	2.296364
 
 (* stream 4GB Samsung *)
 (* daq		rapl *)
@@ -385,11 +451,14 @@ newcurve marktype box
 color 1.0 1.0 0.0 linetype none
 label x 0.8 y 2.7 vjc hjl font Helveitca fontsize 12 : stream
 pts
-
-
-
-
-
-
-
+2.218571	2.427102
+2.235319	2.447479
+2.240725	2.467875
+2.240037	2.464402
+2.231143	2.444029
+2.237029	2.457175
+2.235296	2.447187
+2.234727	2.447785
+2.235673	2.446453
+2.245287	2.468740
 
