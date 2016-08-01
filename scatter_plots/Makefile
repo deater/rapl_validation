@@ -1,4 +1,4 @@
-all:	haswell_ep.png haswell_i7.png
+all:	haswell_ep.png haswell_i7.png haswell_i5.eps
 
 haswell_ep.png:	haswell_ep.eps
 	convert -density 300 haswell_ep.eps -resize 640x640 haswell_ep.png
@@ -15,6 +15,10 @@ haswell_i7.eps:	haswell_i7.jgr
 	jgraph < haswell_i7.jgr > haswell_i7.eps
 
 
+haswell_i5.eps:	haswell_i5.jgr
+	jgraph < haswell_i5.jgr > haswell_i5.eps
+
+
 clean:	
-	rm *.eps
+	rm -f *.eps *~
 
